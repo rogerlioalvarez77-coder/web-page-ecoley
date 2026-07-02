@@ -121,14 +121,34 @@ Referencia de dónde se usa cada imagen:
 
 ---
 
-## 6. Formulario de solicitud (opcional)
+## 6. Formulario de solicitud
 
-Por defecto el formulario funciona en **modo demostración**: valida los datos y muestra el mensaje de éxito, pero **no envía la información a ningún lado**.
+El formulario ya está conectado a un backend real mediante una **Cloudflare Pages Function** (`functions/api/enviar-solicitud.js`), que recibe los datos y envía un correo usando [Resend](https://resend.com). `CONFIG.formEndpoint` apunta a `/api/enviar-solicitud`; si lo dejas vacío vuelve al modo demostración (no envía nada, solo muestra el mensaje de éxito).
 
-Para que las solicitudes te lleguen de verdad, necesitas un servicio que reciba el formulario (por ejemplo [Web3Forms](https://web3forms.com) o una función de Cloudflare Pages) y pegar su URL en `formEndpoint` dentro de `CONFIG`. Si lo dejas vacío, se queda en modo demostración.
+### Configurar Resend en Cloudflare Pages
+
+En el panel de Cloudflare Pages del proyecto → **Settings → Environment variables**, agrega:
+
+| Variable | Tipo | Descripción |
+|---|---|---|
+| `RESEND_API_KEY` | Secret | Tu API key de Resend (la misma que tienes en `.env` local — **no la subas al repo**). |
+| `TO_EMAIL` | Texto (opcional) | Correo donde quieres recibir las solicitudes. Por defecto: `atencionalcliente@ecoleysv.com`. |
+| `FROM_EMAIL` | Texto (opcional) | Remitente del correo. Por defecto usa el dominio de pruebas `onboarding@resend.dev`. |
+
+> **Importante — dominio de pruebas vs. dominio propio:** mientras no verifiques un dominio en Resend, `onboarding@resend.dev` **solo puede enviar correos a la dirección con la que creaste la cuenta de Resend**, no a cualquier destinatario. Para recibir las solicitudes en `atencionalcliente@ecoleysv.com` (o cualquier otro correo) hay que:
+> 1. Verificar el dominio `ecoleysv.com` en Resend (Dashboard → Domains → agregar los registros DNS que te indiquen).
+> 2. Cambiar `FROM_EMAIL` a algo del dominio verificado, por ejemplo `Ecoley <notificaciones@ecoleysv.com>`.
+
+Después de configurar las variables, vuelve a desplegar (Cloudflare re-despliega automáticamente al hacer push, o puedes forzar un "Retry deployment").
+
+### Probar localmente
+
+Las Cloudflare Pages Functions no corren con un servidor estático simple (`python3 -m http.server`, Live Server, etc.) — solo funcionan una vez desplegadas en Cloudflare, o localmente con `npx wrangler pages dev . --binding RESEND_API_KEY=tu_key`.
 
 ---
 
 ## 7. Publicar el sitio en internet
 
-Como es una carpeta de archivos estáticos, puedes subirla tal cual a cualquier hosting estático gratuito: **Cloudflare Pages, Netlify o Vercel** (arrastrar y soltar la carpeta), o el hosting web que ya tengas. No requiere servidor especial.
+El sitio (incluyendo el formulario) está pensado para **Cloudflare Pages**: conecta el repositorio de Git en el dashboard de Cloudflare Pages, o sube la carpeta directamente — la carpeta `functions/` se detecta automáticamente y no requiere configuración de build.
+
+Netlify y Vercel también sirven para el sitio estático, pero la función `functions/api/enviar-solicitud.js` es específica del formato de Cloudflare Pages Functions; si migras de hosting habría que reescribirla en el formato de ese proveedor (Netlify Functions, Vercel Serverless Functions, etc.).

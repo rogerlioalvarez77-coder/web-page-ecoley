@@ -361,7 +361,7 @@ window.ECOLEY_GTM_ID = window.ECOLEY_GTM_ID || ''; /* <-- pon aquí tu 'GTM-XXXX
         <div style="border:1.5px dashed #cdcabf;border-radius:10px;padding:20px;background:#fbfbf9;text-align:center">
           <input id="ec-file" name="archivo" type="file" accept="image/*,.pdf" onChange="{{ onFile }}" style="display:none">
           <label for="ec-file" style="display:inline-block;background:#e9edf7;color:#1c2c54;font-size:13px;font-weight:600;padding:11px 22px;border-radius:6px;cursor:pointer">Seleccionar archivo</label>
-          <div style="font-size:12.5px;color:#8a8f83;margin-top:10px">PDF o imagen · máximo 5 MB</div>
+          <div style="font-size:12.5px;color:#8a8f83;margin-top:10px">PDF o imagen · máximo 10 MB</div>
           <sc-if value="{{ fileName }}" hint-placeholder-val="{{ false }}"><div style="font-size:13px;color:#1c2c54;font-weight:600;margin-top:10px">{{ fileName }}</div></sc-if>
         </div>
         <sc-if value="{{ fileError }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ fileError }}</div></sc-if>
@@ -435,7 +435,7 @@ class Component extends DCLogic {
     whatsapp: '50373869004',
     facebook: 'https://www.facebook.com/profile.php?id=61560088484137',
     direccion: 'San Salvador, El Salvador', // TODO
-    formEndpoint: ''                       // URL de Cloudflare Pages Function o Web3Forms. Vacío = modo demostración
+    formEndpoint: '/api/enviar-solicitud'  // Cloudflare Pages Function (functions/api/enviar-solicitud.js). Vacío = modo demostración
   };
 
   // ====================================================================
@@ -514,7 +514,7 @@ class Component extends DCLogic {
   onFile = (e) => {
     const file = e.target.files && e.target.files[0];
     if (!file) { this.setState({ fileName: '', fileObj: null, fileError: '' }); return; }
-    if (file.size > 5 * 1024 * 1024) { this.setState({ fileName: file.name, fileObj: null, fileError: 'El archivo supera los 5 MB. Elige uno más pequeño.' }); return; }
+    if (file.size > 10 * 1024 * 1024) { this.setState({ fileName: file.name, fileObj: null, fileError: 'El archivo supera los 10 MB. Elige uno más pequeño.' }); return; }
     this.setState(s => ({ fileName: file.name, fileObj: file, fileError: '', errors: { ...s.errors, archivo: '' } }));
   };
   onConsent = (e) => { const c = e.target.checked; this.setState(s => ({ form: { ...s.form, consentimiento: c }, errors: { ...s.errors, consentimiento: '' } })); };
