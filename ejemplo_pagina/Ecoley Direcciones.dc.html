@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#eceae4;font-family:system-ui,sans-serif}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:34px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:10px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.09);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2f7d5a;color:#fff}
+.dv-next{margin:24px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Ecoley — 2 direcciones visuales (página de inicio)</span></div>
+<div class="dv-opts">
+
+<!-- ============ OPTION 1a — INSTITUCIONAL CLÁSICO ============ -->
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Institucional Clásico · serif Newsreader + Public Sans · verde bosque</div>
+<div class="dv-card" style="width:1180px">
+<div style="font-family:'Public Sans',sans-serif;color:#22271f;background:#fff">
+
+<!-- top bar -->
+<div style="display:flex;align-items:center;justify-content:space-between;padding:18px 44px;border-bottom:1px solid #e6e3da">
+<div style="display:flex;align-items:center;gap:13px">
+<div style="width:46px;height:46px;border-radius:9px;background:#1f4634;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:26px;font-weight:600;color:#e9d9a8">E</div>
+<div style="line-height:1.1">
+<div style="font-family:'Newsreader',serif;font-size:22px;font-weight:600;letter-spacing:.5px;color:#1f4634">ECOLEY</div>
+<div style="font-size:10.5px;letter-spacing:.9px;text-transform:uppercase;color:#8a8f83">Economistas y Consultores de Ley</div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:30px">
+<div style="display:flex;gap:26px;font-size:12.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase">
+<span style="color:#1f4634;border-bottom:2px solid #b8933f;padding-bottom:4px">Inicio</span>
+<span style="color:#5a6157">Servicios Jurídicos</span>
+<span style="color:#5a6157">Préstamos</span>
+<span style="color:#5a6157">Recuperación de Cartera</span>
+<span style="color:#5a6157">Contacto</span>
+</div>
+<div style="background:#1f4634;color:#fff;font-size:12px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;padding:11px 22px;border-radius:30px">Contáctanos</div>
+</div>
+</div>
+
+<!-- hero -->
+<div style="display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding:70px 44px;background:#f7f5ef">
+<div>
+<div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b8933f;margin-bottom:18px">Bienvenido a Ecoley</div>
+<h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:48px;line-height:1.12;margin:0 0 20px;color:#1c2b21">Soluciones jurídicas y financieras en las que puedes confiar</h1>
+<p style="font-size:16.5px;line-height:1.65;color:#4c534a;margin:0 0 30px;max-width:480px">Asesoría legal, intermediación de préstamos y recuperación de cartera para personas y empresas en El Salvador. Cerca de ti, con respaldo profesional.</p>
+<div style="display:flex;gap:14px">
+<div style="background:#1f4634;color:#fff;font-size:13.5px;font-weight:600;padding:15px 30px;border-radius:6px">Solicita tu asesoría</div>
+<div style="border:1.5px solid #1f4634;color:#1f4634;font-size:13.5px;font-weight:600;padding:14px 28px;border-radius:6px">Conoce los servicios</div>
+</div>
+</div>
+<div style="aspect-ratio:4/3;border-radius:12px;background:repeating-linear-gradient(135deg,#e7e9e2 0 13px,#eef0e9 13px 26px);border:1px solid #dcded5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px">
+<div style="width:44px;height:44px;border-radius:50%;border:2px dashed #a9b0a2"></div>
+<div style="font:600 11px ui-monospace,Menlo,monospace;color:#7f867a;text-align:center;padding:0 20px">FOTO — asesor con cliente<br>en oficina (tono cálido)</div>
+</div>
+</div>
+
+<!-- services -->
+<div style="padding:74px 44px 80px">
+<div style="text-align:center;max-width:640px;margin:0 auto 48px">
+<div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b8933f;margin-bottom:12px">Nuestros servicios</div>
+<h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:34px;margin:0 0 12px;color:#1c2b21">Tres formas de acompañarte</h2>
+<p style="font-size:15px;line-height:1.6;color:#5a6157;margin:0">Cada servicio incluye un formulario para que un agente te contacte y personalice la solución.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+
+<div style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff">
+<div style="aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#e7e9e2 0 13px,#eef0e9 13px 26px);display:flex;align-items:center;justify-content:center;font:600 10.5px ui-monospace,Menlo,monospace;color:#7f867a;text-align:center;padding:0 16px">FOTO — abogado / firma de contrato</div>
+<div style="padding:26px 24px 28px">
+<div style="width:38px;height:38px;border-radius:8px;background:#eef2ec;color:#1f4634;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:19px;font-weight:600;margin-bottom:16px">§</div>
+<h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1c2b21">Servicios Jurídicos</h3>
+<p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px">Asesoría y acompañamiento legal para personas y empresas: contratos, trámites, consultoría preventiva y procesos mercantiles.</p>
+<div style="display:inline-block;border:1.5px solid #1f4634;color:#1f4634;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px">Ver más</div>
+</div>
+</div>
+
+<div style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff">
+<div style="aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#e7e9e2 0 13px,#eef0e9 13px 26px);display:flex;align-items:center;justify-content:center;font:600 10.5px ui-monospace,Menlo,monospace;color:#7f867a;text-align:center;padding:0 16px">FOTO — familia / llaves de casa</div>
+<div style="padding:26px 24px 28px">
+<div style="width:38px;height:38px;border-radius:8px;background:#eef2ec;color:#1f4634;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:19px;font-weight:600;margin-bottom:16px">₡</div>
+<h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1c2b21">Intermediación de Préstamos</h3>
+<p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px">Te conectamos con opciones de financiamiento a tu medida: préstamos personales, prendarios e hipotecarios.</p>
+<div style="display:inline-block;border:1.5px solid #1f4634;color:#1f4634;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px">Ver más</div>
+</div>
+</div>
+
+<div style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff">
+<div style="aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#e7e9e2 0 13px,#eef0e9 13px 26px);display:flex;align-items:center;justify-content:center;font:600 10.5px ui-monospace,Menlo,monospace;color:#7f867a;text-align:center;padding:0 16px">FOTO — reunión de negocios / handshake</div>
+<div style="padding:26px 24px 28px">
+<div style="width:38px;height:38px;border-radius:8px;background:#eef2ec;color:#1f4634;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:19px;font-weight:600;margin-bottom:16px">↺</div>
+<h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1c2b21">Gestión y Recuperación de Cartera</h3>
+<p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px">Cobro y recuperación de cuentas por cobrar dentro del marco legal, con negociación y convenios de pago.</p>
+<div style="display:inline-block;border:1.5px solid #1f4634;color:#1f4634;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px">Ver más</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- footer / contact strip -->
+<div style="background:#1f4634;color:#dfe6dc;padding:42px 44px;display:flex;align-items:center;justify-content:space-between;gap:30px">
+<div>
+<div style="font-family:'Newsreader',serif;font-size:22px;color:#fff;margin-bottom:6px">¿Hablamos de tu caso?</div>
+<div style="font-size:13.5px;color:#aebba8">Envíanos tu información y un agente te contacta.</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<div style="background:#e9d9a8;color:#1f4634;font-size:13px;font-weight:700;padding:13px 24px;border-radius:6px">Envíanos tu información</div>
+<div style="border:1.5px solid #4d6a58;color:#fff;font-size:13px;font-weight:600;padding:12px 22px;border-radius:6px">WhatsApp</div>
+<div style="width:42px;height:42px;border-radius:50%;border:1.5px solid #4d6a58;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px">f</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- ============ OPTION 1b — MODERNO CÁLIDO ============ -->
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Moderno Cálido · Bricolage Grotesque + Figtree · esmeralda/salvia, más redondeado</div>
+<div class="dv-card" style="width:1180px">
+<div style="font-family:'Figtree',sans-serif;color:#20291f;background:#f6f4ec">
+
+<!-- top bar -->
+<div style="display:flex;align-items:center;justify-content:space-between;padding:20px 44px">
+<div style="display:flex;align-items:center;gap:13px">
+<div style="width:46px;height:46px;border-radius:14px;background:#2f7d5a;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;color:#fff">e</div>
+<div style="line-height:1.1">
+<div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:700;color:#22503b">ecoley</div>
+<div style="font-size:10.5px;letter-spacing:.4px;color:#8b9184">Economistas y Consultores de Ley</div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:28px">
+<div style="display:flex;gap:24px;font-size:13.5px;font-weight:600">
+<span style="color:#22503b">Inicio</span>
+<span style="color:#6b7264">Servicios Jurídicos</span>
+<span style="color:#6b7264">Préstamos</span>
+<span style="color:#6b7264">Cartera</span>
+<span style="color:#6b7264">Contacto</span>
+</div>
+<div style="background:#2f7d5a;color:#fff;font-size:13.5px;font-weight:600;padding:12px 24px;border-radius:30px">Contáctanos</div>
+</div>
+</div>
+
+<!-- hero -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:46px 44px 60px">
+<div>
+<div style="display:inline-block;background:#e3efe4;color:#2f7d5a;font-size:12.5px;font-weight:600;padding:7px 16px;border-radius:30px;margin-bottom:22px">Bienvenido a Ecoley 👋</div>
+<h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:50px;line-height:1.05;margin:0 0 20px;color:#1a3a2a;letter-spacing:-.5px">Tu aliado legal y financiero, cerca de ti</h1>
+<p style="font-size:17px;line-height:1.6;color:#565e51;margin:0 0 30px;max-width:470px">Asesoría jurídica, intermediación de préstamos y recuperación de cartera — con trato humano y respaldo profesional en El Salvador.</p>
+<div style="display:flex;gap:13px">
+<div style="background:#2f7d5a;color:#fff;font-size:14.5px;font-weight:600;padding:16px 30px;border-radius:32px">Solicita tu asesoría</div>
+<div style="background:#fff;border:1.5px solid #d6dccf;color:#22503b;font-size:14.5px;font-weight:600;padding:15px 28px;border-radius:32px">Ver servicios</div>
+</div>
+</div>
+<div style="aspect-ratio:1/1;border-radius:28px;background:repeating-linear-gradient(135deg,#e5ebdf 0 13px,#edf1e8 13px 26px);border:1px solid #dbe1d3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px">
+<div style="width:46px;height:46px;border-radius:50%;border:2px dashed #a7b09c"></div>
+<div style="font:600 11px ui-monospace,Menlo,monospace;color:#828a78;text-align:center;padding:0 20px">FOTO — persona sonriendo,<br>ambiente cercano y cálido</div>
+</div>
+</div>
+
+<!-- services -->
+<div style="background:#fff;border-radius:36px 36px 0 0;padding:70px 44px 78px">
+<div style="max-width:660px;margin:0 auto 46px;text-align:center">
+<div style="display:inline-block;background:#f2ede1;color:#a67c2e;font-size:12.5px;font-weight:600;padding:6px 15px;border-radius:30px;margin-bottom:14px">Nuestros servicios</div>
+<h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:36px;margin:0 0 12px;color:#1a3a2a;letter-spacing:-.5px">Todo lo que necesitas, en un solo lugar</h2>
+<p style="font-size:15.5px;line-height:1.6;color:#6b7264;margin:0">Elige un servicio y déjanos tus datos — un agente te contacta enseguida.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+
+<div style="background:#f8f6ef;border-radius:24px;padding:0;overflow:hidden">
+<div style="aspect-ratio:16/10;margin:14px 14px 0;border-radius:16px;background:repeating-linear-gradient(135deg,#e5ebdf 0 13px,#edf1e8 13px 26px);display:flex;align-items:center;justify-content:center;font:600 10.5px ui-monospace,Menlo,monospace;color:#828a78;text-align:center;padding:0 14px">FOTO — abogada revisando documentos</div>
+<div style="padding:22px 24px 26px">
+<div style="width:44px;height:44px;border-radius:13px;background:#2f7d5a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;margin-bottom:15px">§</div>
+<h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:21px;margin:0 0 9px;color:#1a3a2a">Servicios Jurídicos</h3>
+<p style="font-size:13.5px;line-height:1.6;color:#6b7264;margin:0 0 18px">Contratos, trámites, consultoría preventiva y procesos mercantiles para personas y empresas.</p>
+<div style="display:inline-flex;align-items:center;gap:6px;color:#2f7d5a;font-size:13.5px;font-weight:700">Ver más →</div>
+</div>
+</div>
+
+<div style="background:#f8f6ef;border-radius:24px;padding:0;overflow:hidden">
+<div style="aspect-ratio:16/10;margin:14px 14px 0;border-radius:16px;background:repeating-linear-gradient(135deg,#e5ebdf 0 13px,#edf1e8 13px 26px);display:flex;align-items:center;justify-content:center;font:600 10.5px ui-monospace,Menlo,monospace;color:#828a78;text-align:center;padding:0 14px">FOTO — familia frente a su casa nueva</div>
+<div style="padding:22px 24px 26px">
+<div style="width:44px;height:44px;border-radius:13px;background:#2f7d5a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;margin-bottom:15px">₡</div>
+<h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:21px;margin:0 0 9px;color:#1a3a2a">Intermediación de Préstamos</h3>
+<p style="font-size:13.5px;line-height:1.6;color:#6b7264;margin:0 0 18px">Financiamiento a tu medida: préstamos personales, prendarios e hipotecarios.</p>
+<div style="display:inline-flex;align-items:center;gap:6px;color:#2f7d5a;font-size:13.5px;font-weight:700">Ver más →</div>
+</div>
+</div>
+
+<div style="background:#f8f6ef;border-radius:24px;padding:0;overflow:hidden">
+<div style="aspect-ratio:16/10;margin:14px 14px 0;border-radius:16px;background:repeating-linear-gradient(135deg,#e5ebdf 0 13px,#edf1e8 13px 26px);display:flex;align-items:center;justify-content:center;font:600 10.5px ui-monospace,Menlo,monospace;color:#828a78;text-align:center;padding:0 14px">FOTO — equipo asesor en reunión</div>
+<div style="padding:22px 24px 26px">
+<div style="width:44px;height:44px;border-radius:13px;background:#2f7d5a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;margin-bottom:15px">↺</div>
+<h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:21px;margin:0 0 9px;color:#1a3a2a">Gestión y Recuperación de Cartera</h3>
+<p style="font-size:13.5px;line-height:1.6;color:#6b7264;margin:0 0 18px">Cobro y recuperación de cuentas por cobrar dentro del marco legal, con acuerdos de pago.</p>
+<div style="display:inline-flex;align-items:center;gap:6px;color:#2f7d5a;font-size:13.5px;font-weight:700">Ver más →</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- footer / contact strip -->
+<div style="background:#22503b;color:#dbe6dc;padding:44px;display:flex;align-items:center;justify-content:space-between;gap:30px">
+<div>
+<div style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:6px">¿Conversamos?</div>
+<div style="font-size:14px;color:#a9baa9">Envíanos tu información y te contactamos hoy mismo.</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<div style="background:#fff;color:#22503b;font-size:13.5px;font-weight:700;padding:14px 26px;border-radius:30px">Envíanos tu información</div>
+<div style="background:#25d366;color:#fff;font-size:13.5px;font-weight:700;padding:14px 24px;border-radius:30px">WhatsApp</div>
+<div style="width:44px;height:44px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px">f</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Prueba: "seguimos con <a class="dv-oid" href="#1a">1a</a>, arma las 5 pestañas y el formulario" · "seguimos con <a class="dv-oid" href="#1b">1b</a>" · "mezcla el header de <a class="dv-oid" href="#1a">1a</a> con los colores de <a class="dv-oid" href="#1b">1b</a>"</p>
+</section>
+</x-dc>
+</body>
+</html>

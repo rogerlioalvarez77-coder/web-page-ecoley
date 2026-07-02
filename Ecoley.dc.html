@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<!-- ===== SEO ===== -->
+<title>Ecoley | Servicios Jurídicos, Préstamos y Recuperación de Cartera en El Salvador</title>
+<meta name="description" content="Ecoley — Economistas y Consultores de Ley. Asesoría jurídica, intermediación de préstamos y gestión de recuperación de cartera para personas y empresas en El Salvador.">
+<meta name="keywords" content="servicios jurídicos El Salvador, asesoría legal, intermediación de préstamos, recuperación de cartera, cobro de deudas, préstamos hipotecarios, Ecoley">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ecoley — Economistas y Consultores de Ley">
+<meta property="og:description" content="Asesoría jurídica, intermediación de préstamos y recuperación de cartera en El Salvador.">
+<meta property="og:locale" content="es_SV">
+<link rel="canonical" href="https://ecoley.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LegalService","name":"Ecoley — Economistas y Consultores de Ley","areaServed":"SV","description":"Servicios jurídicos, intermediación de préstamos y recuperación de cartera.","address":{"@type":"PostalAddress","addressCountry":"SV"}}
+</script>
+<!-- ===== Google Tag Manager (se activa solo si defines el ID) ===== -->
+<script>
+window.ECOLEY_GTM_ID = window.ECOLEY_GTM_ID || ''; /* <-- pon aquí tu 'GTM-XXXXXXX' */
+(function(){ if(!window.ECOLEY_GTM_ID) return; var w=window,d=document,s='script',l='dataLayer',i=window.ECOLEY_GTM_ID; w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0],j=d.createElement(s); j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i; f.parentNode.insertBefore(j,f); })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:#1a2236;font-family:'Public Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .ec-nav{cursor:pointer;font-size:12.5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:#5a6157;padding-bottom:4px;border-bottom:2px solid transparent;white-space:nowrap;text-decoration:none;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit;transition:color .15s,border-color .15s}
+  .ec-nav:hover{color:#1c2c54}
+  .ec-nav.ec-active{color:#1c2c54;border-bottom-color:#b8933f}
+  .ec-navlinks{display:flex;align-items:center;gap:26px}
+  .ec-hamb{display:none;cursor:pointer;background:none;border:1px solid #d3d0c6;border-radius:8px;padding:7px 11px;font-size:18px;color:#1c2c54;line-height:1}
+  @media(max-width:920px){
+    .ec-hamb{display:inline-flex;align-items:center}
+    .ec-navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #e6e3da;flex-direction:column;align-items:flex-start;gap:18px;padding:22px 24px;box-shadow:0 14px 26px rgba(0,0,0,.09);z-index:60}
+    .ec-navlinks.open{display:flex}
+  }
+</style>
+</helmet>
+
+<!-- ============================ HEADER ============================ -->
+<header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e6e3da">
+  <div style="max-width:1200px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative">
+    <div onClick="{{ navInicio }}" style="display:flex;align-items:center;gap:12px;cursor:pointer">
+      <img src="assets/logo.png" alt="Ecoley" style="width:46px;height:46px;border-radius:9px;object-fit:cover;background:#fff;border:1px solid #e6e3da">
+      <div style="line-height:1.12">
+        <div style="font-family:'Newsreader',serif;font-size:21px;font-weight:600;letter-spacing:.5px;color:#1c2c54">ECOLEY</div>
+        <div style="font-size:9.5px;letter-spacing:.85px;text-transform:uppercase;color:#8a8f83">Economistas y Consultores de Ley</div>
+      </div>
+    </div>
+    <button class="ec-hamb" onClick="{{ toggleMenu }}" aria-label="Menú">☰</button>
+    <nav class="ec-navlinks {{ menuClass }}">
+      <button class="{{ navInicioClass }}" onClick="{{ navInicio }}">Inicio</button>
+      <button class="{{ navJuridicosClass }}" onClick="{{ navJuridicos }}">Servicios Jurídicos</button>
+      <button class="{{ navPrestamosClass }}" onClick="{{ navPrestamos }}">Préstamos</button>
+      <button class="{{ navCarteraClass }}" onClick="{{ navCartera }}">Recuperación de Cartera</button>
+      <button onClick="{{ navContacto }}" style="background:#1c2c54;color:#fff;font-size:12px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;padding:11px 22px;border-radius:30px;border:none;cursor:pointer;font-family:inherit">Contáctanos</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ INICIO ============================ -->
+<sc-if value="{{ isInicio }}" hint-placeholder-val="{{ true }}">
+<div>
+  <!-- hero -->
+  <section style="background:#f7f5ef;border-bottom:1px solid #eee6d8">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,86px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,5vw,56px);align-items:center">
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b8933f;margin-bottom:18px">Bienvenido a Ecoley</div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(32px,5vw,50px);line-height:1.12;margin:0 0 20px;color:#1a2236">Soluciones jurídicas y financieras en las que puedes confiar</h1>
+        <p style="font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#4c534a;margin:0 0 30px;max-width:500px">Asesoría legal, intermediación de préstamos y recuperación de cartera para personas y empresas en El Salvador. Cerca de ti, con respaldo profesional.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <button onClick="{{ goFormGeneric }}" style="background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 30px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Solicita tu asesoría</button>
+          <button onClick="{{ navJuridicos }}" style="border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:14px;font-weight:600;padding:14px 28px;border-radius:6px;cursor:pointer;font-family:inherit">Conoce los servicios</button>
+        </div>
+      </div>
+      <div style="aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid #dcded5"><img src="assets/reunion-oficina.jpg" alt="Asesor con cliente en oficina" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+  </section>
+
+  <!-- 3 servicios -->
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) 24px">
+    <div style="text-align:center;max-width:640px;margin:0 auto 48px">
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px"><span style="width:30px;height:2px;background:#1c2c54"></span><span style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b8933f">Nuestros servicios</span></div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(26px,3.5vw,36px);margin:0 0 12px;color:#1a2236">Tres formas de acompañarte</h2>
+      <p style="font-size:15px;line-height:1.6;color:#5a6157;margin:0">Elige un servicio y déjanos tus datos — un agente te contacta para personalizar la solución.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px">
+      <div style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+        <div style="aspect-ratio:3/2;overflow:hidden"><img src="assets/abogado-contrato.png" alt="Abogado firmando contrato" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 24px 28px;display:flex;flex-direction:column;flex:1">
+          <div style="width:38px;height:38px;border-radius:8px;background:#e9edf7;color:#1c2c54;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:19px;font-weight:600;margin-bottom:16px">⚖</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1a2236">Servicios Jurídicos</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Asesoría y acompañamiento legal para personas y empresas: contratos, trámites, consultoría preventiva y procesos mercantiles.</p>
+          <button onClick="{{ navJuridicos }}" style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver más</button>
+        </div>
+      </div>
+      <div style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+        <div style="aspect-ratio:3/2;overflow:hidden"><img src="assets/prestamo-hipotecario.jpg" alt="Entrega de llaves de vivienda" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 24px 28px;display:flex;flex-direction:column;flex:1">
+          <div style="width:38px;height:38px;border-radius:8px;background:#e9edf7;color:#1c2c54;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:19px;font-weight:600;margin-bottom:16px">$</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1a2236">Intermediación de Préstamos</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Te conectamos con opciones de financiamiento a tu medida: préstamos personales, prendarios e hipotecarios.</p>
+          <button onClick="{{ navPrestamos }}" style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver más</button>
+        </div>
+      </div>
+      <div style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+        <div style="aspect-ratio:3/2;overflow:hidden"><img src="assets/handshake.jpg" alt="Reunión de negocios" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 24px 28px;display:flex;flex-direction:column;flex:1">
+          <div style="width:38px;height:38px;border-radius:8px;background:#e9edf7;color:#1c2c54;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:19px;font-weight:600;margin-bottom:16px">↺</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1a2236">Gestión y Recuperación de Cartera</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Cobro y recuperación de cuentas por cobrar dentro del marco legal, con negociación y convenios de pago.</p>
+          <button onClick="{{ navCartera }}" style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver más</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about / trust strip -->
+  <section style="background:#1c2c54;color:#dde1ee">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,72px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(30px,5vw,56px);align-items:center">
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e9d9a8;margin-bottom:14px">Somos Ecoley</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(24px,3vw,32px);line-height:1.2;margin:0 0 16px;color:#fff">Un equipo que combina el criterio legal con la visión financiera</h2>
+        <p style="font-size:15px;line-height:1.7;color:#b3bad2;margin:0 0 26px;max-width:520px">En Economistas y Consultores de Ley acompañamos a personas y empresas con soluciones confiables, personalizadas y siempre dentro del marco legal vigente.</p>
+        <button onClick="{{ navContacto }}" style="background:#e9d9a8;color:#1c2c54;font-size:14px;font-weight:700;padding:14px 28px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Contáctanos</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+        <div style="background:#25366a;border:1px solid #37477d;border-radius:12px;padding:24px"><div style="font-family:'Newsreader',serif;font-size:30px;color:#e9d9a8;margin-bottom:6px">3</div><div style="font-size:13.5px;color:#c6cbde">Líneas de servicio integrales</div></div>
+        <div style="background:#25366a;border:1px solid #37477d;border-radius:12px;padding:24px"><div style="font-family:'Newsreader',serif;font-size:30px;color:#e9d9a8;margin-bottom:6px">SV</div><div style="font-size:13.5px;color:#c6cbde">Cobertura en todo El Salvador</div></div>
+        <div style="background:#25366a;border:1px solid #37477d;border-radius:12px;padding:24px"><div style="font-family:'Newsreader',serif;font-size:30px;color:#e9d9a8;margin-bottom:6px">100%</div><div style="font-size:13.5px;color:#c6cbde">Dentro del marco legal vigente</div></div>
+        <div style="background:#25366a;border:1px solid #37477d;border-radius:12px;padding:24px"><div style="font-family:'Newsreader',serif;font-size:30px;color:#e9d9a8;margin-bottom:6px">1:1</div><div style="font-size:13.5px;color:#c6cbde">Atención personalizada por caso</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ============================ SERVICIOS JURÍDICOS ============================ -->
+<sc-if value="{{ isJuridicos }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#f7f5ef;border-bottom:1px solid #eee6d8">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) 24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><span style="width:34px;height:2px;background:#1c2c54"></span><span style="font:600 13px ui-monospace,Menlo,monospace;color:#b8933f">01.</span></div>
+      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4.5vw,46px);margin:0 0 16px;color:#1a2236">Servicios Jurídicos</h1>
+      <p style="font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#4c534a;margin:0;max-width:720px">Contamos con asesoría y acompañamiento legal orientado a personas naturales y empresas, brindando soluciones confiables y personalizadas en diversas áreas del ámbito jurídico.</p>
+    </div>
+  </section>
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,60px);align-items:start">
+    <div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;margin:0 0 24px;color:#1a2236">Nuestros servicios incluyen</h2>
+      <div style="display:grid;gap:16px">
+        <sc-for list="{{ juridicosItems }}" as="it" hint-placeholder-count="6">
+          <div style="display:flex;gap:13px;align-items:flex-start"><span style="flex:none;width:24px;height:24px;border-radius:50%;background:#e9edf7;color:#1c2c54;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:15px;line-height:1.5;color:#3a4137">{{ it }}</span></div>
+        </sc-for>
+      </div>
+      <button onClick="{{ solicitarJuridicos }}" style="margin-top:32px;background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 30px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Solicitar este servicio</button>
+    </div>
+    <div style="display:grid;gap:18px">
+      <div style="aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid #dcded5"><img src="assets/abogado-asesorando.png" alt="Abogada asesorando a cliente" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="background:#e9edf7;border-radius:14px;padding:26px"><div style="font-family:'Newsreader',serif;font-size:18px;color:#1c2c54;margin-bottom:8px">Acompañamiento de principio a fin</div><p style="font-size:13.5px;line-height:1.6;color:#4c534a;margin:0">Analizamos tu caso, definimos la estrategia y te acompañamos en cada trámite y proceso.</p></div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ============================ PRÉSTAMOS ============================ -->
+<sc-if value="{{ isPrestamos }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#f7f5ef;border-bottom:1px solid #eee6d8">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) 24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><span style="width:34px;height:2px;background:#1c2c54"></span><span style="font:600 13px ui-monospace,Menlo,monospace;color:#b8933f">02.</span></div>
+      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4.5vw,46px);margin:0 0 16px;color:#1a2236">Intermediación de Préstamos</h1>
+      <p style="font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#4c534a;margin:0;max-width:720px">Facilitamos el acceso a opciones de financiamiento mediante un servicio de intermediación profesional, orientado a encontrar alternativas que se adapten a las necesidades de cada cliente.</p>
+    </div>
+  </section>
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px">
+      <sc-for list="{{ prestamosProductos }}" as="prod" hint-placeholder-count="3">
+        <div style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+          <div style="aspect-ratio:3/2;overflow:hidden"><img src="{{ prod.img }}" alt="{{ prod.t }}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div style="padding:26px 24px 28px;display:flex;flex-direction:column;flex:1">
+            <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1a2236">{{ prod.t }}</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">{{ prod.d }}</p>
+            <button onClick="{{ solicitarPrestamos }}" style="align-self:flex-start;background:#1c2c54;color:#fff;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:11px 22px;border-radius:30px;border:none;cursor:pointer;font-family:inherit">Solicitar</button>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ============================ RECUPERACIÓN DE CARTERA ============================ -->
+<sc-if value="{{ isCartera }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#f7f5ef;border-bottom:1px solid #eee6d8">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) 24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><span style="width:34px;height:2px;background:#1c2c54"></span><span style="font:600 13px ui-monospace,Menlo,monospace;color:#b8933f">03.</span></div>
+      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4.5vw,46px);margin:0 0 16px;color:#1a2236">Gestión y Recuperación de Cartera</h1>
+      <p style="font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#4c534a;margin:0;max-width:760px">Ofrecemos servicios especializados de gestión de cobro y recuperación de cuentas por cobrar, orientados a personas, comerciantes y empresas que buscan soluciones efectivas para la recuperación de sus créditos, siempre dentro del marco legal vigente.</p>
+    </div>
+  </section>
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,60px);align-items:start">
+    <div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;margin:0 0 24px;color:#1a2236">Nuestros servicios incluyen</h2>
+      <div style="display:grid;gap:16px">
+        <sc-for list="{{ carteraItems }}" as="it" hint-placeholder-count="7">
+          <div style="display:flex;gap:13px;align-items:flex-start"><span style="flex:none;width:24px;height:24px;border-radius:50%;background:#e9edf7;color:#1c2c54;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:15px;line-height:1.5;color:#3a4137">{{ it }}</span></div>
+        </sc-for>
+      </div>
+      <button onClick="{{ solicitarCartera }}" style="margin-top:32px;background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 30px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Solicitar este servicio</button>
+    </div>
+    <div style="display:grid;gap:18px">
+      <div style="aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid #dcded5"><img src="assets/revisando-cuenta.jpg" alt="Equipo revisando estados de cuenta" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="background:#e9edf7;border-radius:14px;padding:26px"><div style="font-family:'Newsreader',serif;font-size:18px;color:#1c2c54;margin-bottom:8px">Recuperación con criterio legal</div><p style="font-size:13.5px;line-height:1.6;color:#4c534a;margin:0">Desde el cobro administrativo hasta el apoyo en procesos judiciales cuando corresponda.</p></div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ============================ CONTACTO ============================ -->
+<sc-if value="{{ isContacto }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#f7f5ef;border-bottom:1px solid #eee6d8">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,68px) 24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><span style="width:34px;height:2px;background:#1c2c54"></span><span style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b8933f">Contáctanos</span></div>
+      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,4.5vw,46px);margin:0;color:#1a2236">Estamos para atenderte</h1>
+    </div>
+  </section>
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,56px);align-items:start">
+    <div style="display:grid;gap:18px">
+      <div style="border:1px solid #e6e3da;border-radius:14px;padding:30px;background:#fff">
+        <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:22px;margin:0 0 8px;color:#1a2236">Envíanos tu información</h2>
+        <p style="font-size:14px;line-height:1.6;color:#5a6157;margin:0 0 20px">Completa el formulario con tus datos y el servicio de tu interés. Un agente revisará tu solicitud y te contactará.</p>
+        <button onClick="{{ goFormGeneric }}" style="background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 28px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Ir al formulario</button>
+      </div>
+      <div style="border:1px solid #e6e3da;border-radius:14px;padding:30px;background:#fff">
+        <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:22px;margin:0 0 8px;color:#1a2236">¿Prefieres hablar con un agente?</h2>
+        <p style="font-size:14px;line-height:1.6;color:#5a6157;margin:0 0 20px">Escríbenos directamente por WhatsApp y con gusto te atendemos.</p>
+        <a href="{{ whatsappLink }}" target="_blank" rel="noopener" style="display:inline-block;background:#1f8a4c;color:#fff;font-size:14px;font-weight:600;padding:15px 28px;border-radius:6px;text-decoration:none">Si quieres contactarte con un agente, da clic aquí</a>
+      </div>
+    </div>
+    <div style="background:#1c2c54;color:#dde1ee;border-radius:14px;padding:34px">
+      <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:22px;margin:0 0 22px;color:#fff">Atención al cliente</h2>
+      <div style="display:grid;gap:18px;margin-bottom:28px">
+        <div><div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8891b0;margin-bottom:4px">Correo</div><a href="mailto:{{ email }}" style="font-size:15px;color:#fff;text-decoration:none">{{ email }}</a></div>
+        <div><div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8891b0;margin-bottom:4px">Teléfono</div><div style="font-size:15px;color:#fff">{{ telefono }}</div></div>
+        <div><div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8891b0;margin-bottom:4px">Ubicación</div><div style="font-size:15px;color:#fff">{{ direccion }}</div></div>
+      </div>
+      <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8891b0;margin-bottom:12px">Síguenos</div>
+      <a href="{{ facebook }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;background:#25366a;border:1px solid #37477d;padding:11px 18px;border-radius:8px"><span style="width:26px;height:26px;border-radius:50%;background:#1877f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">f</span>Facebook</a>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ============================ FORMULARIO ============================ -->
+<sc-if value="{{ isFormulario }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#f7f5ef;border-bottom:1px solid #eee6d8">
+    <div style="max-width:900px;margin:0 auto;padding:clamp(44px,6vw,68px) 24px;text-align:center">
+      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(28px,4vw,42px);margin:0 0 12px;color:#1a2236">Solicita tu servicio en línea</h1>
+      <p style="font-size:clamp(14px,1.4vw,16px);line-height:1.6;color:#5a6157;margin:0">Completa el formulario con tus datos y pronto un agente se pondrá en contacto contigo.</p>
+    </div>
+  </section>
+  <section style="max-width:900px;margin:0 auto;padding:clamp(40px,5vw,64px) 24px">
+
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="border:1px solid #cfe3d5;background:#f1f8f2;border-radius:14px;padding:44px;text-align:center">
+        <div style="width:64px;height:64px;border-radius:50%;background:#1f8a4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 20px">✓</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:26px;margin:0 0 10px;color:#1a2236">¡Solicitud enviada!</h2>
+        <p style="font-size:15px;line-height:1.6;color:#4c534a;margin:0 0 26px">Gracias por contactar a Ecoley. Un agente revisará tu información y te contactará pronto.</p>
+        <button onClick="{{ nuevaSolicitud }}" style="background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:14px 28px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Enviar otra solicitud</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+    <form onSubmit="{{ onSubmit }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Nombre completo <span style="color:#c0392b">*</span></label>
+        <input name="nombre" value="{{ form.nombre }}" onChange="{{ onField }}" placeholder="Nombre y apellidos" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+        <sc-if value="{{ errors.nombre }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.nombre }}</div></sc-if>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">DUI <span style="color:#c0392b">*</span></label>
+        <input name="dui" value="{{ form.dui }}" onChange="{{ onField }}" inputmode="numeric" placeholder="00000000-0" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+        <sc-if value="{{ errors.dui }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.dui }}</div></sc-if>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Teléfono <span style="color:#c0392b">*</span></label>
+        <input name="telefono" value="{{ form.telefono }}" onChange="{{ onField }}" inputmode="numeric" placeholder="0000-0000" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+        <sc-if value="{{ errors.telefono }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.telefono }}</div></sc-if>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Correo electrónico <span style="color:#c0392b">*</span></label>
+        <input name="correo" type="email" value="{{ form.correo }}" onChange="{{ onField }}" placeholder="tucorreo@ejemplo.com" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+        <sc-if value="{{ errors.correo }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.correo }}</div></sc-if>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Lugar de trabajo o empresa <span style="color:#c0392b">*</span></label>
+        <input name="lugarTrabajo" value="{{ form.lugarTrabajo }}" onChange="{{ onField }}" placeholder="Nombre de la empresa" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+        <sc-if value="{{ errors.lugarTrabajo }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.lugarTrabajo }}</div></sc-if>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Monto de sueldo o ingresos <span style="color:#c0392b">*</span></label>
+        <div style="display:flex;align-items:center;border:1px solid #d3d0c6;border-radius:8px;overflow:hidden;background:#fbfbf9">
+          <span style="padding:0 14px;color:#8a8f83;font-size:15px;font-weight:600">$</span>
+          <input name="sueldo" value="{{ form.sueldo }}" onChange="{{ onField }}" inputmode="decimal" placeholder="0.00" style="flex:1;border:none;padding:13px 15px 13px 4px;background:transparent;font-size:14.5px;font-family:inherit;color:#1a2236;outline:none">
+        </div>
+        <sc-if value="{{ errors.sueldo }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.sueldo }}</div></sc-if>
+      </div>
+
+      <div style="grid-column:1/-1">
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Dirección <span style="color:#c0392b">*</span></label>
+        <input name="direccion" value="{{ form.direccion }}" onChange="{{ onField }}" placeholder="Dirección completa" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+        <sc-if value="{{ errors.direccion }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.direccion }}</div></sc-if>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio de interés <span style="color:#c0392b">*</span></label>
+        <select name="servicioInteresado" value="{{ form.servicioInteresado }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+          <option value="">— Selecciona —</option>
+          <sc-for list="{{ serviceInteresadoOptions }}" as="op" hint-placeholder-count="3"><option value="{{ op }}">{{ op }}</option></sc-for>
+        </select>
+        <sc-if value="{{ errors.servicioInteresado }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.servicioInteresado }}</div></sc-if>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio específico <span style="color:#c0392b">*</span></label>
+        <select name="servicioEspecifico" value="{{ form.servicioEspecifico }}" onChange="{{ onField }}" disabled="{{ especificoDisabled }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+          <option value="">— Selecciona un servicio primero —</option>
+          <sc-for list="{{ especificoOptions }}" as="op" hint-placeholder-count="3"><option value="{{ op }}">{{ op }}</option></sc-for>
+        </select>
+        <sc-if value="{{ errors.servicioEspecifico }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.servicioEspecifico }}</div></sc-if>
+      </div>
+
+      <div style="grid-column:1/-1">
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Comentarios</label>
+        <textarea name="comentarios" value="{{ form.comentarios }}" onChange="{{ onField }}" rows="4" placeholder="Cuéntanos brevemente sobre tu caso (opcional)" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none;resize:vertical" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)"></textarea>
+      </div>
+
+      <div style="grid-column:1/-1">
+        <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Constancia de sueldo o balance (si eres comerciante)</label>
+        <div style="border:1.5px dashed #cdcabf;border-radius:10px;padding:20px;background:#fbfbf9;text-align:center">
+          <input id="ec-file" name="archivo" type="file" accept="image/*,.pdf" onChange="{{ onFile }}" style="display:none">
+          <label for="ec-file" style="display:inline-block;background:#e9edf7;color:#1c2c54;font-size:13px;font-weight:600;padding:11px 22px;border-radius:6px;cursor:pointer">Seleccionar archivo</label>
+          <div style="font-size:12.5px;color:#8a8f83;margin-top:10px">PDF o imagen · máximo 5 MB</div>
+          <sc-if value="{{ fileName }}" hint-placeholder-val="{{ false }}"><div style="font-size:13px;color:#1c2c54;font-weight:600;margin-top:10px">{{ fileName }}</div></sc-if>
+        </div>
+        <sc-if value="{{ fileError }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ fileError }}</div></sc-if>
+      </div>
+
+      <div style="grid-column:1/-1">
+        <label style="display:flex;gap:11px;align-items:flex-start;cursor:pointer">
+          <input type="checkbox" checked="{{ form.consentimiento }}" onChange="{{ onConsent }}" style="margin-top:3px;width:17px;height:17px;accent-color:#1c2c54;flex:none">
+          <span style="font-size:13.5px;line-height:1.55;color:#4c534a">Acepto que Ecoley recopile y almacene la información proporcionada con el fin de gestionar mi solicitud, conforme a su política de privacidad. <span style="color:#c0392b">*</span></span>
+        </label>
+        <sc-if value="{{ errors.consentimiento }}" hint-placeholder-val="{{ false }}"><div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.consentimiento }}</div></sc-if>
+      </div>
+
+      <sc-if value="{{ submitError }}" hint-placeholder-val="{{ false }}"><div style="grid-column:1/-1;background:#fdf0ef;border:1px solid #f3cfcb;color:#c0392b;font-size:13.5px;padding:14px 16px;border-radius:8px">{{ submitError }}</div></sc-if>
+
+      <div style="grid-column:1/-1">
+        <button type="submit" disabled="{{ sending }}" style="background:#1c2c54;color:#fff;font-size:15px;font-weight:600;padding:16px 40px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">{{ sendLabel }}</button>
+      </div>
+    </form>
+    </sc-if>
+  </section>
+</div>
+</sc-if>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer style="background:#141d38;color:#c6cbde">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,5vw,64px) 24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px">
+    <div>
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+        <img src="assets/logo.png" alt="Ecoley" style="width:42px;height:42px;border-radius:8px;object-fit:cover;background:#fff">
+        <div><div style="font-family:'Newsreader',serif;font-size:19px;font-weight:600;color:#fff;letter-spacing:.5px">ECOLEY</div><div style="font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:#8189a8">Economistas y Consultores de Ley</div></div>
+      </div>
+      <p style="font-size:13.5px;line-height:1.6;color:#9098b5;margin:0;max-width:280px">Soluciones jurídicas y financieras confiables para personas y empresas en El Salvador.</p>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8189a8;margin-bottom:16px">Servicios</div>
+      <div style="display:grid;gap:11px;font-size:13.5px">
+        <span onClick="{{ navJuridicos }}" style="cursor:pointer;color:#c6cbde">Servicios Jurídicos</span>
+        <span onClick="{{ navPrestamos }}" style="cursor:pointer;color:#c6cbde">Intermediación de Préstamos</span>
+        <span onClick="{{ navCartera }}" style="cursor:pointer;color:#c6cbde">Recuperación de Cartera</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8189a8;margin-bottom:16px">Contacto</div>
+      <div style="display:grid;gap:11px;font-size:13.5px">
+        <a href="mailto:{{ email }}" style="color:#c6cbde;text-decoration:none">{{ email }}</a>
+        <span style="color:#c6cbde">{{ telefono }}</span>
+        <a href="{{ whatsappLink }}" target="_blank" rel="noopener" style="color:#c6cbde;text-decoration:none">WhatsApp</a>
+        <a href="{{ facebook }}" target="_blank" rel="noopener" style="color:#c6cbde;text-decoration:none">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:26px 24px;margin-top:40px;border-top:1px solid #2a3358;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12.5px;color:#8189a8">
+    <span>© {{ year }} Ecoley — Economistas y Consultores de Ley. Todos los derechos reservados.</span>
+    <span>Tus datos se tratan de forma confidencial y segura.</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  // ====================================================================
+  // CONFIGURACIÓN — edita aquí los datos de contacto y del envío del formulario
+  // ====================================================================
+  CONFIG = {
+    empresa: 'Ecoley',
+    empresaFull: 'Economistas y Consultores de Ley',
+    email: 'atencionalcliente@ecoleysv.com',
+    telefono: '+503 7386-9004',
+    whatsapp: '50373869004',
+    facebook: 'https://www.facebook.com/profile.php?id=61560088484137',
+    direccion: 'San Salvador, El Salvador', // TODO
+    formEndpoint: ''                       // URL de Cloudflare Pages Function o Web3Forms. Vacío = modo demostración
+  };
+
+  // ====================================================================
+  // CONTENIDO — listas de servicios (fácilmente editables)
+  // ====================================================================
+  juridicosItems = [
+    'Asesoría legal integral',
+    'Elaboración y revisión de contratos',
+    'Trámites administrativos',
+    'Gestión y regularización de documentación',
+    'Consultoría jurídica preventiva',
+    'Asistencia en procesos legales y mercantiles'
+  ];
+  carteraItems = [
+    'Cobro administrativo de deudas',
+    'Recuperación de cartera vencida',
+    'Negociación y acuerdos de pago',
+    'Elaboración de convenios de pago',
+    'Seguimiento y control de cuentas por cobrar',
+    'Asesoría jurídica para la recuperación de créditos',
+    'Cobro prejudicial y apoyo en procesos judiciales'
+  ];
+  prestamosProductos = [
+    { t: 'Préstamos Personales', d: 'Opciones de financiamiento para cubrir necesidades personales, familiares, educativas, de salud o proyectos particulares.', img: 'assets/prestamo-personal.jpg' },
+    { t: 'Préstamos Prendarios', d: 'Alternativas de crédito respaldadas por bienes muebles, con procesos ágiles y condiciones competitivas.', img: 'assets/prestamo-prendario.jpg' },
+    { t: 'Préstamos Hipotecarios', d: 'Financiamiento para adquisición, construcción, remodelación o consolidación de inmuebles, con acompañamiento durante todo el proceso.', img: 'assets/prestamo-hipotecario.jpg' }
+  ];
+  serviceInteresadoOptions = ['Servicios Jurídicos', 'Intermediación de Préstamos', 'Gestión y Recuperación de Cartera'];
+  especificoMap = {
+    'Servicios Jurídicos': this.juridicosItems,
+    'Intermediación de Préstamos': ['Préstamos Personales', 'Préstamos Prendarios', 'Préstamos Hipotecarios'],
+    'Gestión y Recuperación de Cartera': this.carteraItems
+  };
+
+  emptyForm() {
+    return { nombre: '', dui: '', telefono: '', correo: '', lugarTrabajo: '', sueldo: '', direccion: '', servicioInteresado: '', servicioEspecifico: '', comentarios: '', consentimiento: false };
+  }
+
+  state = { page: 'inicio', menuOpen: false, form: this.emptyForm(), errors: {}, fileName: '', fileObj: null, fileError: '', sending: false, submitError: '', submitted: false };
+
+  componentDidMount() {
+    try { document.documentElement.lang = 'es'; document.title = 'Ecoley | Servicios Jurídicos, Préstamos y Recuperación de Cartera'; } catch (e) {}
+  }
+
+  // ---------- navegación ----------
+  go = (page) => { this.setState({ page, menuOpen: false, submitted: false }); try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {} };
+  navInicio = () => this.go('inicio');
+  navJuridicos = () => this.go('juridicos');
+  navPrestamos = () => this.go('prestamos');
+  navCartera = () => this.go('cartera');
+  navContacto = () => this.go('contacto');
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+
+  goForm = (servicio) => {
+    this.setState(s => ({ page: 'formulario', menuOpen: false, submitted: false, errors: {}, form: { ...s.form, servicioInteresado: servicio || '', servicioEspecifico: '' } }));
+    try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {}
+  };
+  goFormGeneric = () => this.goForm('');
+  solicitarJuridicos = () => this.goForm('Servicios Jurídicos');
+  solicitarPrestamos = () => this.goForm('Intermediación de Préstamos');
+  solicitarCartera = () => this.goForm('Gestión y Recuperación de Cartera');
+  nuevaSolicitud = () => this.setState({ submitted: false, form: this.emptyForm(), errors: {}, fileName: '', fileObj: null, fileError: '', submitError: '' });
+
+  // ---------- formulario ----------
+  onField = (e) => {
+    const name = e.target.name; let v = e.target.value;
+    if (name === 'telefono') v = v.replace(/\D/g, '').slice(0, 8);
+    else if (name === 'dui') v = v.replace(/[^\d-]/g, '').slice(0, 10);
+    else if (name === 'sueldo') v = v.replace(/[^\d.]/g, '');
+    this.setState(s => {
+      const form = { ...s.form, [name]: v };
+      if (name === 'servicioInteresado') form.servicioEspecifico = '';
+      return { form, errors: { ...s.errors, [name]: '' } };
+    });
+  };
+  onFile = (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) { this.setState({ fileName: '', fileObj: null, fileError: '' }); return; }
+    if (file.size > 5 * 1024 * 1024) { this.setState({ fileName: file.name, fileObj: null, fileError: 'El archivo supera los 5 MB. Elige uno más pequeño.' }); return; }
+    this.setState(s => ({ fileName: file.name, fileObj: file, fileError: '', errors: { ...s.errors, archivo: '' } }));
+  };
+  onConsent = (e) => { const c = e.target.checked; this.setState(s => ({ form: { ...s.form, consentimiento: c }, errors: { ...s.errors, consentimiento: '' } })); };
+
+  onSubmit = async (e) => {
+    e.preventDefault();
+    const f = this.state.form; const errs = {};
+    if (!f.nombre || f.nombre.trim().length < 3) errs.nombre = 'Ingresa tu nombre completo.';
+    if (!/^\d{8}-?\d$/.test(f.dui || '')) errs.dui = 'DUI inválido. Formato: 00000000-0.';
+    if (!/^\d{8}$/.test(f.telefono || '')) errs.telefono = 'El teléfono debe tener 8 dígitos.';
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.correo || '')) errs.correo = 'Ingresa un correo electrónico válido.';
+    if (!f.lugarTrabajo || !f.lugarTrabajo.trim()) errs.lugarTrabajo = 'Campo requerido.';
+    if (!f.sueldo || Number(f.sueldo) <= 0) errs.sueldo = 'Ingresa un monto válido.';
+    if (!f.direccion || !f.direccion.trim()) errs.direccion = 'Campo requerido.';
+    if (!f.servicioInteresado) errs.servicioInteresado = 'Selecciona un servicio.';
+    if (!f.servicioEspecifico) errs.servicioEspecifico = 'Selecciona una opción.';
+    if (!f.consentimiento) errs.consentimiento = 'Debes aceptar para continuar.';
+    if (this.state.fileError) errs.archivo = this.state.fileError;
+    if (Object.keys(errs).length) { this.setState({ errors: errs, submitError: '' }); return; }
+
+    this.setState({ sending: true, submitError: '' });
+    try {
+      if (this.CONFIG.formEndpoint) {
+        const fd = new FormData();
+        Object.entries(f).forEach(([k, v]) => fd.append(k, v));
+        if (this.state.fileObj) fd.append('archivo', this.state.fileObj);
+        const r = await fetch(this.CONFIG.formEndpoint, { method: 'POST', body: fd });
+        if (!r.ok) throw new Error('bad response');
+      } else {
+        await new Promise(res => setTimeout(res, 700)); // modo demostración (sin backend configurado)
+      }
+      this.setState({ submitted: true, sending: false });
+    } catch (err) {
+      this.setState({ sending: false, submitError: 'No se pudo enviar la solicitud. Intenta de nuevo o escríbenos por WhatsApp.' });
+    }
+  };
+
+  renderVals() {
+    const s = this.state, C = this.CONFIG;
+    const especificoOptions = this.especificoMap[s.form.servicioInteresado] || [];
+    const active = (p) => 'ec-nav' + (s.page === p ? ' ec-active' : '');
+    return {
+      empresa: C.empresa, empresaFull: C.empresaFull, email: C.email, telefono: C.telefono,
+      direccion: C.direccion, whatsappLink: 'https://wa.me/' + C.whatsapp, facebook: C.facebook,
+      year: new Date().getFullYear(),
+      isInicio: s.page === 'inicio', isJuridicos: s.page === 'juridicos', isPrestamos: s.page === 'prestamos',
+      isCartera: s.page === 'cartera', isContacto: s.page === 'contacto', isFormulario: s.page === 'formulario',
+      navInicioClass: active('inicio'), navJuridicosClass: active('juridicos'), navPrestamosClass: active('prestamos'), navCarteraClass: active('cartera'),
+      menuClass: s.menuOpen ? 'open' : '',
+      juridicosItems: this.juridicosItems, carteraItems: this.carteraItems, prestamosProductos: this.prestamosProductos,
+      serviceInteresadoOptions: this.serviceInteresadoOptions, especificoOptions,
+      especificoDisabled: !s.form.servicioInteresado,
+      form: s.form, errors: s.errors, fileName: s.fileName, fileError: s.fileError,
+      sending: s.sending, submitError: s.submitError, submitted: s.submitted, notSubmitted: !s.submitted,
+      sendLabel: s.sending ? 'Enviando…' : 'Enviar solicitud',
+      navInicio: this.navInicio, navJuridicos: this.navJuridicos, navPrestamos: this.navPrestamos, navCartera: this.navCartera, navContacto: this.navContacto,
+      toggleMenu: this.toggleMenu, goFormGeneric: this.goFormGeneric,
+      solicitarJuridicos: this.solicitarJuridicos, solicitarPrestamos: this.solicitarPrestamos, solicitarCartera: this.solicitarCartera,
+      nuevaSolicitud: this.nuevaSolicitud, onField: this.onField, onFile: this.onFile, onConsent: this.onConsent, onSubmit: this.onSubmit
+    };
+  }
+}
+</script>
+</body>
+</html>
