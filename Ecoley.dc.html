@@ -287,6 +287,7 @@ window.ECOLEY_GTM_ID = window.ECOLEY_GTM_ID || ''; /* <-- pon aquí tu 'GTM-XXXX
 
     <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
     <form onSubmit="{{ onSubmit }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+      <input name="honeypot" value="{{ form.honeypot }}" onChange="{{ onField }}" tabIndex="-1" autoComplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
       <div>
         <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Nombre completo <span style="color:#c0392b">*</span></label>
@@ -471,7 +472,7 @@ class Component extends DCLogic {
   };
 
   emptyForm() {
-    return { nombre: '', dui: '', telefono: '', correo: '', lugarTrabajo: '', sueldo: '', direccion: '', servicioInteresado: '', servicioEspecifico: '', comentarios: '', consentimiento: false };
+    return { nombre: '', dui: '', telefono: '', correo: '', lugarTrabajo: '', sueldo: '', direccion: '', servicioInteresado: '', servicioEspecifico: '', comentarios: '', consentimiento: false, honeypot: '' };
   }
 
   state = { page: 'inicio', menuOpen: false, form: this.emptyForm(), errors: {}, fileName: '', fileObj: null, fileError: '', sending: false, submitError: '', submitted: false };

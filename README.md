@@ -145,6 +145,20 @@ Después de configurar las variables, vuelve a desplegar (Cloudflare re-desplieg
 
 Las Cloudflare Pages Functions no corren con un servidor estático simple (`python3 -m http.server`, Live Server, etc.) — solo funcionan una vez desplegadas en Cloudflare, o localmente con `npx wrangler pages dev . --binding RESEND_API_KEY=tu_key`.
 
+### Protecciones ya incluidas en el backend
+
+- **Validación de formato en el servidor**: DUI, teléfono y correo se revisan también en `functions/api/enviar-solicitud.js`, no solo en el navegador.
+- **Consentimiento obligatorio**: si el checkbox de privacidad no llega marcado, el servidor rechaza la solicitud (antes solo se exigía en el navegador).
+- **Límite de adjunto en el servidor**: además del máximo de 10 MB en el formulario, la función rechaza cualquier archivo mayor a 10 MB aunque alguien llame al endpoint directamente.
+- **Honeypot anti-bot**: el formulario incluye un campo oculto (`honeypot`) invisible para personas; si llega lleno, la función responde "ok" sin enviar el correo, para frenar bots simples sin necesidad de CAPTCHA.
+
+### Recomendado además (fuera del código): límite de solicitudes
+
+El endpoint es público, así que un bot más sofisticado podría llamarlo repetidamente y agotar tu cuota de Resend. Cloudflare Pages no permite limitar esto solo con código de la función; actívalo desde el dashboard:
+
+1. Cloudflare → tu dominio → **Security → WAF → Rate limiting rules**.
+2. Crea una regla sobre la ruta `/api/enviar-solicitud`, por ejemplo: máximo 5 solicitudes por IP cada 10 minutos.
+
 ---
 
 ## 7. Publicar el sitio en internet
