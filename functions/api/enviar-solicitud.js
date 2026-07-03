@@ -93,6 +93,7 @@ export async function onRequestPost({ request, env }) {
 
   const data = {};
   for (const { key } of FIELDS) data[key] = cleanField(form.get(key));
+  data.servicioEspecificoOtro = cleanField(form.get('servicioEspecificoOtro'));
   data.comentarios = cleanField(form.get('comentarios'));
   data.consentimiento = form.get('consentimiento');
 
@@ -104,8 +105,14 @@ export async function onRequestPost({ request, env }) {
   if (!PHONE_RE.test(data.telefono)) return jsonResponse({ error: 'Teléfono inválido. Debe tener 8 dígitos.' }, 400);
   if (!EMAIL_RE.test(data.correo)) return jsonResponse({ error: 'Correo inválido.' }, 400);
   if (data.consentimiento !== 'true') return jsonResponse({ error: 'Falta el consentimiento del solicitante.' }, 400);
+  if (data.servicioEspecifico === 'Otros' && !data.servicioEspecificoOtro) {
+    return jsonResponse({ error: 'Falta especificar el servicio ("Otros").' }, 400);
+  }
 
-  const rows = FIELDS.map(({ key, label }) => [label, data[key]]);
+  const servicioEspecificoDisplay = data.servicioEspecifico === 'Otros'
+    ? `Otros: ${data.servicioEspecificoOtro}`
+    : data.servicioEspecifico;
+  const rows = FIELDS.map(({ key, label }) => [label, key === 'servicioEspecifico' ? servicioEspecificoDisplay : data[key]]);
   rows.push(['Comentarios', data.comentarios || '(sin comentarios)']);
 
   const html = `
