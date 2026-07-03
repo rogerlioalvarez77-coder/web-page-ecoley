@@ -145,6 +145,7 @@ export async function onRequestPost({ request, env }) {
 
   if (!resendRes.ok) {
     const detail = await resendRes.text().catch(() => '');
+    console.error('[enviar-solicitud] Resend rechazó el envío:', resendRes.status, detail);
     return jsonResponse({ error: 'Resend rechazó el envío', detail }, 502);
   }
 
