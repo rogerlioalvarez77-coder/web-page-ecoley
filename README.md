@@ -8,10 +8,11 @@ Sitio web de **Ecoley — Economistas y Consultores de Ley**: página de inicio,
 
 ```
 /
-├── Ecoley.dc.html            ← EL SITIO PRINCIPAL (aquí se edita todo)
-├── Ecoley Direcciones.dc.html← Bocetos de dirección visual (referencia, no es el sitio)
+├── index.html                ← EL SITIO PRINCIPAL (aquí se edita todo)
 ├── support.js                ← Motor interno. NO editar.
 ├── README.md                 ← Este archivo
+├── ejemplo_pagina/
+│   └── Direcciones.html      ← Bocetos de dirección visual (referencia, no es el sitio)
 └── assets/                   ← Todas las imágenes y el logo
     ├── logo.png
     ├── reunion-oficina.jpg
@@ -24,7 +25,7 @@ Sitio web de **Ecoley — Economistas y Consultores de Ley**: página de inicio,
     └── prestamo-hipotecario.jpg
 ```
 
-Todo el contenido del sitio (texto, iconos, referencias a imágenes y la lógica) vive dentro de **`Ecoley.dc.html`**.
+Todo el contenido del sitio (texto, iconos, referencias a imágenes y la lógica) vive dentro de **`index.html`**.
 
 ---
 
@@ -37,24 +38,24 @@ Solo necesitas:
 1. **Un navegador moderno** (Chrome, Edge, Firefox o Safari actualizados).
 2. **Conexión a internet** la primera vez que abras la página: las librerías internas (React y Babel) se descargan automáticamente desde un CDN. No requiere instalación.
 3. *(Recomendado)* una forma sencilla de servir la carpeta como sitio local. Elige **una** opción:
-   - **VS Code + extensión "Live Server"** → clic derecho sobre `Ecoley.dc.html` → *Open with Live Server*.
+   - **VS Code + extensión "Live Server"** → clic derecho sobre `index.html` → *Open with Live Server*.
    - **Python** (ya viene en Mac/Linux): en la carpeta del proyecto ejecuta
      ```
      python3 -m http.server 8080
      ```
-     y abre `http://localhost:8080/Ecoley.dc.html`
+     y abre `http://localhost:8080/index.html`
    - **Node** (si lo tienes):
      ```
      npx serve
      ```
 
-> También puedes hacer doble clic en `Ecoley.dc.html` para abrirlo directo en el navegador; funciona en la mayoría de casos, pero usar un servidor local (opciones de arriba) evita bloqueos de seguridad del navegador.
+> También puedes hacer doble clic en `index.html` para abrirlo directo en el navegador; funciona en la mayoría de casos, pero usar un servidor local (opciones de arriba) evita bloqueos de seguridad del navegador.
 
 ---
 
 ## 3. Cómo editar el TEXTO
 
-Abre `Ecoley.dc.html` con cualquier editor de texto (Bloc de notas, VS Code, etc.).
+Abre `index.html` con cualquier editor de texto (Bloc de notas, VS Code, etc.).
 
 ### a) Datos de contacto (correo, teléfono, WhatsApp, Facebook)
 Busca el bloque **`CONFIG`** cerca del final del archivo (dentro de `<script ... data-dc-script>`):
@@ -104,7 +105,7 @@ Tienes dos formas:
 
 **Opción fácil (recomendada):** reemplaza el archivo dentro de `assets/` manteniendo **el mismo nombre**. Por ejemplo, para cambiar la foto del inicio, sustituye `assets/reunion-oficina.jpg` por tu nueva foto y renómbrala igual. El sitio la tomará automáticamente.
 
-**Opción manual:** en `Ecoley.dc.html` busca la etiqueta `<img src="assets/...">` correspondiente y cambia la ruta al nuevo archivo.
+**Opción manual:** en `index.html` busca la etiqueta `<img src="assets/...">` correspondiente y cambia la ruta al nuevo archivo.
 
 Referencia de dónde se usa cada imagen:
 - `logo.png` → logo en encabezado y pie de página

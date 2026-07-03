@@ -17,7 +17,7 @@
 // dominio -> Security -> WAF -> Rate limiting rules, agrega una regla sobre
 // /api/enviar-solicitud (ej. máximo 5 solicitudes por IP cada 10 minutos).
 
-const MAX_FILE_BYTES = 10 * 1024 * 1024; // debe coincidir con el límite del cliente en Ecoley.dc.html (onFile)
+const MAX_FILE_BYTES = 10 * 1024 * 1024; // debe coincidir con el límite del cliente en index.html (onFile)
 
 const FIELDS = [
   { key: 'nombre', label: 'Nombre' },
@@ -78,7 +78,7 @@ export async function onRequestPost({ request, env }) {
     return jsonResponse({ error: 'Formulario inválido' }, 400);
   }
 
-  // Honeypot: campo oculto (ver Ecoley.dc.html) que un usuario real nunca
+  // Honeypot: campo oculto (ver index.html) que un usuario real nunca
   // llena. Si viene lleno, es un bot — respondemos "ok" sin enviar el correo
   // para no delatar el filtro.
   if (cleanField(form.get('honeypot'))) {
