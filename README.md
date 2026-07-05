@@ -1,6 +1,6 @@
 # Sitio Web Ecoley
 
-Sitio web de **Ecoley — Economistas y Consultores de Ley**: página de inicio, tres páginas de servicios (Servicios Jurídicos, Intermediación de Préstamos, Recuperación de Cartera), página de contacto y formulario de solicitud.
+Sitio web de **Ecoley — Economistas y Consultores de Leyes**: página de inicio, tres páginas de servicios (Servicios Jurídicos, Intermediación de Préstamos, Recuperación de Cartera), página de contacto y formulario de solicitud.
 
 ---
 

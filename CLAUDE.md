@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A static marketing site for Ecoley (economistas y consultores de ley, El Salvador). No npm, no build step, no test suite, no CI. Everything lives in three places:
+A static marketing site for Ecoley (Economistas y Consultores de Leyes, El Salvador). No npm, no build step, no test suite, no CI. Everything lives in three places:
 
 - `index.html` — the entire site (markup, content, and logic). **This is the only file to edit for content/behavior changes.**
 - `support.js` — GENERATED runtime engine for the `.dc.html` template format (`<x-dc>`, `<sc-if>`, `{{ expr }}` bindings). **Never edit directly.** Its header says to rebuild from `dc-runtime/src/*.ts` with `bun run build`, but that `dc-runtime/` source directory does not exist in this checkout — treat the file as fixed/vendored.

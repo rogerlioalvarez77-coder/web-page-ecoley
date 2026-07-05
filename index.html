@@ -17,18 +17,18 @@
       <!-- ===== SEO ===== -->
       <title>Ecoley | Servicios Jurídicos, Préstamos y Recuperación de Cartera en El Salvador</title>
       <meta name="description"
-        content="Ecoley — Economistas y Consultores de Ley. Asesoría jurídica, intermediación de préstamos y gestión de recuperación de cartera para personas y empresas en El Salvador.">
+        content="Ecoley — Economistas y Consultores de Leyes. Asesoría jurídica, intermediación de préstamos y gestión de recuperación de cartera para personas y empresas en El Salvador.">
       <meta name="keywords"
         content="servicios jurídicos El Salvador, asesoría legal, intermediación de préstamos, recuperación de cartera, cobro de deudas, préstamos hipotecarios, Ecoley">
       <meta name="robots" content="index, follow">
       <meta property="og:type" content="website">
-      <meta property="og:title" content="Ecoley — Economistas y Consultores de Ley">
+      <meta property="og:title" content="Ecoley — Economistas y Consultores de Leyes">
       <meta property="og:description"
         content="Asesoría jurídica, intermediación de préstamos y recuperación de cartera en El Salvador.">
       <meta property="og:locale" content="es_SV">
       <link rel="canonical" href="https://ecoley.com/">
       <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LegalService","name":"Ecoley — Economistas y Consultores de Ley","areaServed":"SV","description":"Servicios jurídicos, intermediación de préstamos y recuperación de cartera.","address":{"@type":"PostalAddress","addressCountry":"SV"}}
+{"@context":"https://schema.org","@type":"LegalService","name":"Ecoley — Economistas y Consultores de Leyes","areaServed":"SV","description":"Servicios jurídicos, intermediación de préstamos y recuperación de cartera.","address":{"@type":"PostalAddress","addressCountry":"SV"}}
 </script>
       <!-- Google Tag Manager -->
       <script>(function (w, d, s, l, i) {
@@ -138,7 +138,7 @@
     <header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e6e3da">
       <div
         style="max-width:1200px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative">
-        <div onClick="{{ navInicio }}" style="display:flex;align-items:center;gap:12px;cursor:pointer">
+        <div id="gtm-logo-inicio" onClick="{{ navInicio }}" style="display:flex;align-items:center;gap:12px;cursor:pointer">
           <img src="assets/logo.png" alt="Ecoley"
             style="width:46px;height:46px;border-radius:9px;object-fit:cover;background:#fff;border:1px solid #e6e3da">
           <div style="line-height:1.12">
@@ -149,13 +149,13 @@
               Consultores de Ley</div>
           </div>
         </div>
-        <button class="ec-hamb" onClick="{{ toggleMenu }}" aria-label="Menú">☰</button>
+        <button id="gtm-menu-toggle" class="ec-hamb" onClick="{{ toggleMenu }}" aria-label="Menú">☰</button>
         <nav class="ec-navlinks {{ menuClass }}">
-          <button class="{{ navInicioClass }}" onClick="{{ navInicio }}">Inicio</button>
-          <button class="{{ navJuridicosClass }}" onClick="{{ navJuridicos }}">Servicios Jurídicos</button>
-          <button class="{{ navPrestamosClass }}" onClick="{{ navPrestamos }}">Préstamos</button>
-          <button class="{{ navCarteraClass }}" onClick="{{ navCartera }}">Recuperación de Cartera</button>
-          <button onClick="{{ navContacto }}"
+          <button id="gtm-nav-inicio" class="{{ navInicioClass }}" onClick="{{ navInicio }}">Inicio</button>
+          <button id="gtm-nav-juridicos" class="{{ navJuridicosClass }}" onClick="{{ navJuridicos }}">Servicios Jurídicos</button>
+          <button id="gtm-nav-prestamos" class="{{ navPrestamosClass }}" onClick="{{ navPrestamos }}">Préstamos</button>
+          <button id="gtm-nav-cartera" class="{{ navCarteraClass }}" onClick="{{ navCartera }}">Recuperación de Cartera</button>
+          <button id="gtm-nav-contacto" onClick="{{ navContacto }}"
             style="background:#1c2c54;color:#fff;font-size:12px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;padding:11px 22px;border-radius:30px;border:none;cursor:pointer;font-family:inherit">Contáctanos</button>
         </nav>
       </div>
@@ -182,10 +182,10 @@
                   Asesoría legal, intermediación de préstamos y recuperación de cartera para personas y empresas en El
                   Salvador. Cerca de ti, con respaldo profesional.</p>
                 <div style="display:flex;flex-wrap:wrap;gap:14px">
-                  <button onClick="{{ goFormGeneric }}"
+                  <button id="gtm-hero-cta-asesoria" onClick="{{ goFormGeneric }}"
                     style="background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 30px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Solicita
                     tu asesoría</button>
-                  <button onClick="{{ navJuridicos }}"
+                  <button id="gtm-hero-cta-servicios" onClick="{{ navJuridicos }}"
                     style="border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:14px;font-weight:600;padding:14px 28px;border-radius:6px;cursor:pointer;font-family:inherit">Conoce
                     los servicios</button>
                 </div>
@@ -225,7 +225,7 @@
                   <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Asesoría y
                     acompañamiento legal para personas y empresas: contratos, trámites, consultoría preventiva y
                     procesos mercantiles.</p>
-                  <button onClick="{{ navJuridicos }}"
+                  <button id="gtm-card-juridicos-vermas" onClick="{{ navJuridicos }}"
                     style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver
                     más</button>
                 </div>
@@ -244,7 +244,7 @@
                     Intermediación de Préstamos</h3>
                   <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Te conectamos con
                     opciones de financiamiento a tu medida: préstamos personales, prendarios e hipotecarios.</p>
-                  <button onClick="{{ navPrestamos }}"
+                  <button id="gtm-card-prestamos-vermas" onClick="{{ navPrestamos }}"
                     style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver
                     más</button>
                 </div>
@@ -262,7 +262,7 @@
                     Gestión y Recuperación de Cartera</h3>
                   <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Cobro y recuperación
                     de cuentas por cobrar dentro del marco legal, con negociación y convenios de pago.</p>
-                  <button onClick="{{ navCartera }}"
+                  <button id="gtm-card-cartera-vermas" onClick="{{ navCartera }}"
                     style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver
                     más</button>
                 </div>
@@ -284,7 +284,7 @@
                 <p style="font-size:15px;line-height:1.7;color:#b3bad2;margin:0 0 26px;max-width:520px">En Economistas y
                   Consultores de Ley acompañamos a personas y empresas con soluciones confiables, personalizadas y
                   siempre dentro del marco legal vigente.</p>
-                <button onClick="{{ navContacto }}"
+                <button id="gtm-about-cta-contacto" onClick="{{ navContacto }}"
                   style="background:#e9d9a8;color:#1c2c54;font-size:14px;font-weight:700;padding:14px 28px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Contáctanos</button>
               </div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
@@ -338,7 +338,7 @@
                       style="font-size:15px;line-height:1.5;color:#3a4137">{{ it }}</span></div>
                 </sc-for>
               </div>
-              <button onClick="{{ solicitarJuridicos }}"
+              <button id="gtm-juridicos-cta-solicitar" onClick="{{ solicitarJuridicos }}"
                 style="margin-top:32px;background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 30px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Solicitar
                 este servicio</button>
             </div>
@@ -385,7 +385,7 @@
                       style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1a2236">
                       {{ prod.t }}</h3>
                     <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">{{ prod.d }}</p>
-                    <button onClick="{{ solicitarPrestamos }}"
+                    <button class="gtm-prestamo-cta-solicitar" data-producto="{{ prod.t }}" onClick="{{ solicitarPrestamos }}"
                       style="align-self:flex-start;background:#1c2c54;color:#fff;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:11px 22px;border-radius:30px;border:none;cursor:pointer;font-family:inherit">Solicitar</button>
                   </div>
                 </div>
@@ -424,7 +424,7 @@
                       style="font-size:15px;line-height:1.5;color:#3a4137">{{ it }}</span></div>
                 </sc-for>
               </div>
-              <button onClick="{{ solicitarCartera }}"
+              <button id="gtm-cartera-cta-solicitar" onClick="{{ solicitarCartera }}"
                 style="margin-top:32px;background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 30px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Solicitar
                 este servicio</button>
             </div>
@@ -465,7 +465,7 @@
                   Envíanos tu información</h2>
                 <p style="font-size:14px;line-height:1.6;color:#5a6157;margin:0 0 20px">Completa el formulario con tus
                   datos y el servicio de tu interés. Un agente revisará tu solicitud y te contactará.</p>
-                <button onClick="{{ goFormGeneric }}"
+                <button id="gtm-contacto-cta-formulario" onClick="{{ goFormGeneric }}"
                   style="background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 28px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Ir
                   al formulario</button>
               </div>
@@ -474,7 +474,7 @@
                   ¿Prefieres hablar con un agente?</h2>
                 <p style="font-size:14px;line-height:1.6;color:#5a6157;margin:0 0 20px">Escríbenos directamente por
                   WhatsApp y con gusto te atendemos.</p>
-                <a href="{{ whatsappLink }}" target="_blank" rel="noopener"
+                <a id="gtm-contacto-whatsapp" href="{{ whatsappLink }}" target="_blank" rel="noopener"
                   style="display:inline-block;background:#1f8a4c;color:#fff;font-size:14px;font-weight:600;padding:15px 28px;border-radius:6px;text-decoration:none">Si
                   quieres contactarte con un agente, da clic aquí</a>
               </div>
@@ -486,7 +486,7 @@
                 <div>
                   <div
                     style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8891b0;margin-bottom:4px">
-                    Correo</div><a href="mailto:{{ email }}" style="font-size:15px;color:#fff;text-decoration:none">{{
+                    Correo</div><a id="gtm-contacto-email" href="mailto:{{ email }}" style="font-size:15px;color:#fff;text-decoration:none">{{
                     email }}</a>
                 </div>
                 <div>
@@ -504,7 +504,7 @@
               </div>
               <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8891b0;margin-bottom:12px">
                 Síguenos</div>
-              <a href="{{ facebook }}" target="_blank" rel="noopener"
+              <a id="gtm-contacto-facebook" href="{{ facebook }}" target="_blank" rel="noopener"
                 style="display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;background:#25366a;border:1px solid #37477d;padding:11px 18px;border-radius:8px"><span
                   style="width:26px;height:26px;border-radius:50%;background:#1877f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">f</span>Facebook</a>
             </div>
@@ -536,14 +536,14 @@
                   ¡Solicitud enviada!</h2>
                 <p style="font-size:15px;line-height:1.6;color:#4c534a;margin:0 0 26px">Gracias por contactar a Ecoley.
                   Un agente revisará tu información y te contactará pronto.</p>
-                <button onClick="{{ nuevaSolicitud }}"
+                <button id="gtm-form-nueva-solicitud" onClick="{{ nuevaSolicitud }}"
                   style="background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:14px 28px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Enviar
                   otra solicitud</button>
               </div>
             </sc-if>
 
             <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
-              <form onSubmit="{{ onSubmit }}"
+              <form id="gtm-form-solicitud" onSubmit="{{ onSubmit }}"
                 style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
                 <input name="honeypot" value="{{ form.honeypot }}" onChange="{{ onField }}" tabIndex="-1"
                   autoComplete="off" aria-hidden="true"
@@ -552,7 +552,7 @@
                 <div>
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Nombre
                     completo <span style="color:#c0392b">*</span></label>
-                  <input name="nombre" value="{{ form.nombre }}" onChange="{{ onField }}"
+                  <input id="gtm-form-nombre" name="nombre" value="{{ form.nombre }}" onChange="{{ onField }}"
                     placeholder="Nombre y apellidos"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -564,7 +564,7 @@
                 <div>
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">DUI <span
                       style="color:#c0392b">*</span></label>
-                  <input name="dui" value="{{ form.dui }}" onChange="{{ onField }}" inputmode="numeric"
+                  <input id="gtm-form-dui" name="dui" value="{{ form.dui }}" onChange="{{ onField }}" inputmode="numeric"
                     placeholder="00000000-0"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -576,7 +576,7 @@
                 <div>
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Teléfono
                     <span style="color:#c0392b">*</span></label>
-                  <input name="telefono" value="{{ form.telefono }}" onChange="{{ onField }}" inputmode="numeric"
+                  <input id="gtm-form-telefono" name="telefono" value="{{ form.telefono }}" onChange="{{ onField }}" inputmode="numeric"
                     placeholder="0000-0000"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -588,7 +588,7 @@
                 <div>
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Correo
                     electrónico <span style="color:#c0392b">*</span></label>
-                  <input name="correo" type="email" value="{{ form.correo }}" onChange="{{ onField }}"
+                  <input id="gtm-form-correo" name="correo" type="email" value="{{ form.correo }}" onChange="{{ onField }}"
                     placeholder="tucorreo@ejemplo.com"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -600,7 +600,7 @@
                 <div>
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Lugar de
                     trabajo o empresa <span style="color:#c0392b">*</span></label>
-                  <input name="lugarTrabajo" value="{{ form.lugarTrabajo }}" onChange="{{ onField }}"
+                  <input id="gtm-form-lugar-trabajo" name="lugarTrabajo" value="{{ form.lugarTrabajo }}" onChange="{{ onField }}"
                     placeholder="Nombre de la empresa"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -615,7 +615,7 @@
                   <div
                     style="display:flex;align-items:center;border:1px solid #d3d0c6;border-radius:8px;overflow:hidden;background:#fbfbf9">
                     <span style="padding:0 14px;color:#8a8f83;font-size:15px;font-weight:600">$</span>
-                    <input name="sueldo" value="{{ form.sueldo }}" onChange="{{ onField }}" inputmode="decimal"
+                    <input id="gtm-form-sueldo" name="sueldo" value="{{ form.sueldo }}" onChange="{{ onField }}" inputmode="decimal"
                       placeholder="0.00"
                       style="flex:1;border:none;padding:13px 15px 13px 4px;background:transparent;font-size:14.5px;font-family:inherit;color:#1a2236;outline:none">
                   </div>
@@ -627,7 +627,7 @@
                 <div style="grid-column:1/-1">
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Dirección
                     <span style="color:#c0392b">*</span></label>
-                  <input name="direccion" value="{{ form.direccion }}" onChange="{{ onField }}"
+                  <input id="gtm-form-direccion" name="direccion" value="{{ form.direccion }}" onChange="{{ onField }}"
                     placeholder="Dirección completa"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -639,7 +639,7 @@
                 <div>
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio
                     de interés <span style="color:#c0392b">*</span></label>
-                  <select name="servicioInteresado" value="{{ form.servicioInteresado }}" onChange="{{ onField }}"
+                  <select id="gtm-form-servicio-interesado" name="servicioInteresado" value="{{ form.servicioInteresado }}" onChange="{{ onField }}"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
                     <option value="">— Selecciona —</option>
@@ -655,7 +655,7 @@
                 <div>
                   <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio
                     específico <span style="color:#c0392b">*</span></label>
-                  <select name="servicioEspecifico" value="{{ form.servicioEspecifico }}" onChange="{{ onField }}"
+                  <select id="gtm-form-servicio-especifico" name="servicioEspecifico" value="{{ form.servicioEspecifico }}" onChange="{{ onField }}"
                     disabled="{{ especificoDisabled }}"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -673,7 +673,7 @@
                   <div style="grid-column:1/-1">
                     <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Especifica
                       el servicio <span style="color:#c0392b">*</span></label>
-                    <input name="servicioEspecificoOtro" value="{{ form.servicioEspecificoOtro }}" onChange="{{ onField }}"
+                    <input id="gtm-form-servicio-otro" name="servicioEspecificoOtro" value="{{ form.servicioEspecificoOtro }}" onChange="{{ onField }}"
                       placeholder="Cuéntanos qué necesitas"
                       style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
                       style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
@@ -686,7 +686,7 @@
                 <div style="grid-column:1/-1">
                   <label
                     style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Comentarios</label>
-                  <textarea name="comentarios" value="{{ form.comentarios }}" onChange="{{ onField }}" rows="4"
+                  <textarea id="gtm-form-comentarios" name="comentarios" value="{{ form.comentarios }}" onChange="{{ onField }}" rows="4"
                     placeholder="Cuéntanos brevemente sobre tu caso (opcional)"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none;resize:vertical"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)"></textarea>
@@ -697,9 +697,9 @@
                     de sueldo o balance (si eres comerciante)</label>
                   <div
                     style="border:1.5px dashed #cdcabf;border-radius:10px;padding:20px;background:#fbfbf9;text-align:center">
-                    <input id="ec-file" name="archivo" type="file" accept="image/*,.pdf" onChange="{{ onFile }}"
+                    <input id="gtm-form-archivo" name="archivo" type="file" accept="image/*,.pdf" onChange="{{ onFile }}"
                       style="display:none">
-                    <label for="ec-file"
+                    <label for="gtm-form-archivo"
                       style="display:inline-block;background:#e9edf7;color:#1c2c54;font-size:13px;font-weight:600;padding:11px 22px;border-radius:6px;cursor:pointer">Seleccionar
                       archivo</label>
                     <div style="font-size:12.5px;color:#8a8f83;margin-top:10px">PDF o imagen · máximo 10 MB</div>
@@ -714,7 +714,7 @@
 
                 <div style="grid-column:1/-1">
                   <label style="display:flex;gap:11px;align-items:flex-start;cursor:pointer">
-                    <input type="checkbox" checked="{{ form.consentimiento }}" onChange="{{ onConsent }}"
+                    <input id="gtm-form-consentimiento" type="checkbox" checked="{{ form.consentimiento }}" onChange="{{ onConsent }}"
                       style="margin-top:3px;width:17px;height:17px;accent-color:#1c2c54;flex:none">
                     <span style="font-size:13.5px;line-height:1.55;color:#4c534a">Acepto que Ecoley recopile y almacene
                       la información proporcionada con el fin de gestionar mi solicitud, conforme a su política de
@@ -732,7 +732,7 @@
                 </sc-if>
 
                 <div style="grid-column:1/-1">
-                  <button type="submit" disabled="{{ sending }}"
+                  <button id="gtm-form-submit" type="submit" disabled="{{ sending }}"
                     style="background:#1c2c54;color:#fff;font-size:15px;font-weight:600;padding:16px 40px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">{{
                     sendLabel }}</button>
                 </div>
@@ -766,27 +766,27 @@
           <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8189a8;margin-bottom:16px">
             Servicios</div>
           <div style="display:grid;gap:11px;font-size:13.5px">
-            <span onClick="{{ navJuridicos }}" style="cursor:pointer;color:#c6cbde">Servicios Jurídicos</span>
-            <span onClick="{{ navPrestamos }}" style="cursor:pointer;color:#c6cbde">Intermediación de Préstamos</span>
-            <span onClick="{{ navCartera }}" style="cursor:pointer;color:#c6cbde">Recuperación de Cartera</span>
+            <span id="gtm-footer-nav-juridicos" onClick="{{ navJuridicos }}" style="cursor:pointer;color:#c6cbde">Servicios Jurídicos</span>
+            <span id="gtm-footer-nav-prestamos" onClick="{{ navPrestamos }}" style="cursor:pointer;color:#c6cbde">Intermediación de Préstamos</span>
+            <span id="gtm-footer-nav-cartera" onClick="{{ navCartera }}" style="cursor:pointer;color:#c6cbde">Recuperación de Cartera</span>
           </div>
         </div>
         <div>
           <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8189a8;margin-bottom:16px">
             Contacto</div>
           <div style="display:grid;gap:11px;font-size:13.5px">
-            <a href="mailto:{{ email }}" style="color:#c6cbde;text-decoration:none">{{ email }}</a>
+            <a id="gtm-footer-email" href="mailto:{{ email }}" style="color:#c6cbde;text-decoration:none">{{ email }}</a>
             <span style="color:#c6cbde">{{ telefono }}</span>
-            <a href="{{ whatsappLink }}" target="_blank" rel="noopener"
+            <a id="gtm-footer-whatsapp" href="{{ whatsappLink }}" target="_blank" rel="noopener"
               style="color:#c6cbde;text-decoration:none">WhatsApp</a>
-            <a href="{{ facebook }}" target="_blank" rel="noopener"
+            <a id="gtm-footer-facebook" href="{{ facebook }}" target="_blank" rel="noopener"
               style="color:#c6cbde;text-decoration:none">Facebook</a>
           </div>
         </div>
       </div>
       <div
         style="max-width:1200px;margin:0 auto;padding:26px 24px;margin-top:40px;border-top:1px solid #2a3358;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12.5px;color:#8189a8">
-        <span>© {{ year }} Ecoley — Economistas y Consultores de Ley. Todos los derechos reservados.</span>
+        <span>© {{ year }} Ecoley — Economistas y Consultores de Leyes. Todos los derechos reservados.</span>
         <span>Tus datos se tratan de forma confidencial y segura.</span>
       </div>
     </footer>
@@ -798,7 +798,7 @@ class Component extends DCLogic {
   // ====================================================================
   CONFIG = {
     empresa: 'Ecoley',
-    empresaFull: 'Economistas y Consultores de Ley',
+    empresaFull: 'Economistas y Consultores de Leyes',
     email: 'atencionalcliente@ecoleysv.com',
     telefono: '+503 7386-9004',
     whatsapp: '50373869004',
