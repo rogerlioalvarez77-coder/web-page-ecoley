@@ -176,11 +176,11 @@
                   Bienvenido a Ecoley</div>
                 <h1
                   style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(32px,5vw,50px);line-height:1.12;margin:0 0 20px;color:#1a2236">
-                  Soluciones jurídicas y financieras en las que puedes confiar</h1>
+                  Soluciones jurídicas y económicas en las que puedes confiar</h1>
                 <p
                   style="font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#4c534a;margin:0 0 30px;max-width:500px">
-                  Asesoría legal, intermediación de préstamos y recuperación de cartera para personas y empresas en El
-                  Salvador. Cerca de ti, con respaldo profesional.</p>
+                  Asesoría legal, intermediación de préstamos y recuperación de cartera para personas y empresas,
+                  brindando atención a nivel nacional con experiencia y atención personalizada.</p>
                 <div style="display:flex;flex-wrap:wrap;gap:14px">
                   <button id="gtm-hero-cta-asesoria" onClick="{{ goFormGeneric }}"
                     style="background:#1c2c54;color:#fff;font-size:14px;font-weight:600;padding:15px 30px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Solicita
@@ -207,7 +207,7 @@
                 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(26px,3.5vw,36px);margin:0 0 12px;color:#1a2236">
                 Tres formas de acompañarte</h2>
               <p style="font-size:15px;line-height:1.6;color:#5a6157;margin:0">Elige un servicio y déjanos tus datos —
-                un agente te contacta para personalizar la solución.</p>
+                un agente te contactará para ayudarte.</p>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px">
               <div
@@ -223,8 +223,8 @@
                     style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1a2236">
                     Servicios Jurídicos</h3>
                   <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Asesoría y
-                    acompañamiento legal para personas y empresas: contratos, trámites, consultoría preventiva y
-                    procesos mercantiles.</p>
+                    acompañamiento legal integral para personas y empresas, con soluciones jurídicas y notariales
+                    adaptadas a cada necesidad.</p>
                   <button id="gtm-card-juridicos-vermas" onClick="{{ navJuridicos }}"
                     style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver
                     más</button>
@@ -243,7 +243,8 @@
                     style="font-family:'Newsreader',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#1a2236">
                     Intermediación de Préstamos</h3>
                   <p style="font-size:13.5px;line-height:1.6;color:#5a6157;margin:0 0 20px;flex:1">Te conectamos con
-                    opciones de financiamiento a tu medida: préstamos personales, prendarios e hipotecarios.</p>
+                    opciones de financiamiento a tu medida: préstamos personales, prendarios, hipotecarios y PrestaGob
+                    para empleados públicos.</p>
                   <button id="gtm-card-prestamos-vermas" onClick="{{ navPrestamos }}"
                     style="align-self:flex-start;border:1.5px solid #1c2c54;color:#1c2c54;background:transparent;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:inherit">Ver
                     más</button>
@@ -280,9 +281,9 @@
                   Somos Ecoley</div>
                 <h2
                   style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(24px,3vw,32px);line-height:1.2;margin:0 0 16px;color:#fff">
-                  Un equipo que combina el criterio legal con la visión financiera</h2>
+                  Un equipo que combina el criterio legal con la visión económica</h2>
                 <p style="font-size:15px;line-height:1.7;color:#b3bad2;margin:0 0 26px;max-width:520px">En Economistas y
-                  Consultores de Ley acompañamos a personas y empresas con soluciones confiables, personalizadas y
+                  Consultores de Leyes acompañamos a personas y empresas con soluciones confiables, personalizadas y
                   siempre dentro del marco legal vigente.</p>
                 <button id="gtm-about-cta-contacto" onClick="{{ navContacto }}"
                   style="background:#e9d9a8;color:#1c2c54;font-size:14px;font-weight:700;padding:14px 28px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">Contáctanos</button>
@@ -332,10 +333,16 @@
               <h2 style="font-family:'Newsreader',serif;font-weight:600;font-size:24px;margin:0 0 24px;color:#1a2236">
                 Nuestros servicios incluyen</h2>
               <div style="display:grid;gap:16px">
-                <sc-for list="{{ juridicosItems }}" as="it" hint-placeholder-count="6">
+                <sc-for list="{{ juridicosItems }}" as="it" hint-placeholder-count="3">
                   <div style="display:flex;gap:13px;align-items:flex-start"><span
-                      style="flex:none;width:24px;height:24px;border-radius:50%;background:#e9edf7;color:#1c2c54;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span
-                      style="font-size:15px;line-height:1.5;color:#3a4137">{{ it }}</span></div>
+                      style="flex:none;width:24px;height:24px;border-radius:50%;background:#e9edf7;color:#1c2c54;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span>
+                    <div>
+                      <div style="font-size:15px;line-height:1.5;color:#3a4137">{{ it.t }}</div>
+                      <sc-if value="{{ it.d }}" hint-placeholder-val="{{ true }}">
+                        <div style="font-size:13.5px;line-height:1.55;color:#5a6157;margin-top:4px">{{ it.d }}</div>
+                      </sc-if>
+                    </div>
+                  </div>
                 </sc-for>
               </div>
               <button id="gtm-juridicos-cta-solicitar" onClick="{{ solicitarJuridicos }}"
@@ -374,7 +381,7 @@
             </div>
           </section>
           <section style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px">
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px">
               <sc-for list="{{ prestamosProductos }}" as="prod" hint-placeholder-count="3">
                 <div
                   style="border:1px solid #e6e3da;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
@@ -409,7 +416,7 @@
               <p style="font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#4c534a;margin:0;max-width:760px">
                 Ofrecemos servicios especializados de gestión de cobro y recuperación de cuentas por cobrar, orientados
                 a personas, comerciantes y empresas que buscan soluciones efectivas para la recuperación de sus
-                créditos, siempre dentro del marco legal vigente.</p>
+                préstamos, siempre dentro del marco legal vigente.</p>
             </div>
           </section>
           <section
@@ -548,100 +555,12 @@
                 <input name="honeypot" value="{{ form.honeypot }}" onChange="{{ onField }}" tabIndex="-1"
                   autoComplete="off" aria-hidden="true"
                   style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-
-                <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Nombre
-                    completo <span style="color:#c0392b">*</span></label>
-                  <input id="gtm-form-nombre" name="nombre" value="{{ form.nombre }}" onChange="{{ onField }}"
-                    placeholder="Nombre y apellidos"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                  <sc-if value="{{ errors.nombre }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.nombre }}</div>
-                  </sc-if>
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">¿Qué necesitas?</div>
                 </div>
-
                 <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">DUI <span
-                      style="color:#c0392b">*</span></label>
-                  <input id="gtm-form-dui" name="dui" value="{{ form.dui }}" onChange="{{ onField }}" inputmode="numeric"
-                    placeholder="00000000-0"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                  <sc-if value="{{ errors.dui }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.dui }}</div>
-                  </sc-if>
-                </div>
-
-                <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Teléfono
-                    <span style="color:#c0392b">*</span></label>
-                  <input id="gtm-form-telefono" name="telefono" value="{{ form.telefono }}" onChange="{{ onField }}" inputmode="numeric"
-                    placeholder="0000-0000"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                  <sc-if value="{{ errors.telefono }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.telefono }}</div>
-                  </sc-if>
-                </div>
-
-                <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Correo
-                    electrónico <span style="color:#c0392b">*</span></label>
-                  <input id="gtm-form-correo" name="correo" type="email" value="{{ form.correo }}" onChange="{{ onField }}"
-                    placeholder="tucorreo@ejemplo.com"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                  <sc-if value="{{ errors.correo }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.correo }}</div>
-                  </sc-if>
-                </div>
-
-                <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Lugar de
-                    trabajo o empresa <span style="color:#c0392b">*</span></label>
-                  <input id="gtm-form-lugar-trabajo" name="lugarTrabajo" value="{{ form.lugarTrabajo }}" onChange="{{ onField }}"
-                    placeholder="Nombre de la empresa"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                  <sc-if value="{{ errors.lugarTrabajo }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.lugarTrabajo }}</div>
-                  </sc-if>
-                </div>
-
-                <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Monto de
-                    sueldo o ingresos <span style="color:#c0392b">*</span></label>
-                  <div
-                    style="display:flex;align-items:center;border:1px solid #d3d0c6;border-radius:8px;overflow:hidden;background:#fbfbf9">
-                    <span style="padding:0 14px;color:#8a8f83;font-size:15px;font-weight:600">$</span>
-                    <input id="gtm-form-sueldo" name="sueldo" value="{{ form.sueldo }}" onChange="{{ onField }}" inputmode="decimal"
-                      placeholder="0.00"
-                      style="flex:1;border:none;padding:13px 15px 13px 4px;background:transparent;font-size:14.5px;font-family:inherit;color:#1a2236;outline:none">
-                  </div>
-                  <sc-if value="{{ errors.sueldo }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.sueldo }}</div>
-                  </sc-if>
-                </div>
-
-                <div style="grid-column:1/-1">
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Dirección
-                    <span style="color:#c0392b">*</span></label>
-                  <input id="gtm-form-direccion" name="direccion" value="{{ form.direccion }}" onChange="{{ onField }}"
-                    placeholder="Dirección completa"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                  <sc-if value="{{ errors.direccion }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.direccion }}</div>
-                  </sc-if>
-                </div>
-
-                <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio
-                    de interés <span style="color:#c0392b">*</span></label>
-                  <select id="gtm-form-servicio-interesado" name="servicioInteresado" value="{{ form.servicioInteresado }}" onChange="{{ onField }}"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio de interés <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-servicio-interesado" name="servicioInteresado" value="{{ form.servicioInteresado }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
                     <option value="">— Selecciona —</option>
                     <sc-for list="{{ serviceInteresadoOptions }}" as="op" hint-placeholder-count="3">
                       <option value="{{ op }}">{{ op }}</option>
@@ -651,70 +570,349 @@
                     <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.servicioInteresado }}</div>
                   </sc-if>
                 </div>
-
+                <sc-if value="{{ isPrestamosForm }}" hint-placeholder-val="{{ false }}">
                 <div>
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio
-                    específico <span style="color:#c0392b">*</span></label>
-                  <select id="gtm-form-servicio-especifico" name="servicioEspecifico" value="{{ form.servicioEspecifico }}" onChange="{{ onField }}"
-                    disabled="{{ especificoDisabled }}"
-                    style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                    style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                    <option value="">— Selecciona un servicio primero —</option>
-                    <sc-for list="{{ especificoOptions }}" as="op" hint-placeholder-count="3">
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Tipo de préstamo <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-tipo-prestamo" name="tipoPrestamo" value="{{ form.tipoPrestamo }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ tipoPrestamoOptions }}" as="op" hint-placeholder-count="3">
                       <option value="{{ op }}">{{ op }}</option>
                     </sc-for>
                   </select>
-                  <sc-if value="{{ errors.servicioEspecifico }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.servicioEspecifico }}</div>
+                  <sc-if value="{{ errors.tipoPrestamo }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.tipoPrestamo }}</div>
                   </sc-if>
                 </div>
-
-                <sc-if value="{{ isOtroServicio }}" hint-placeholder-val="{{ false }}">
-                  <div style="grid-column:1/-1">
-                    <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Especifica
-                      el servicio <span style="color:#c0392b">*</span></label>
-                    <input id="gtm-form-servicio-otro" name="servicioEspecificoOtro" value="{{ form.servicioEspecificoOtro }}" onChange="{{ onField }}"
-                      placeholder="Cuéntanos qué necesitas"
-                      style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none"
-                      style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
-                    <sc-if value="{{ errors.servicioEspecificoOtro }}" hint-placeholder-val="{{ false }}">
-                      <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.servicioEspecificoOtro }}</div>
-                    </sc-if>
-                  </div>
                 </sc-if>
-
+                <sc-if value="{{ mostrarDetalle }}" hint-placeholder-val="{{ true }}">
+                  <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">Datos de contacto</div>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Nombre completo <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-nombre" name="nombre" value="{{ form.nombre }}" onChange="{{ onField }}"
+                    placeholder="Nombre y apellidos" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.nombre }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.nombre }}</div>
+                  </sc-if>
+                </div>
+                <sc-if value="{{ pideDui }}" hint-placeholder-val="{{ true }}">
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">DUI <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-dui" name="dui" value="{{ form.dui }}" onChange="{{ onField }}" inputmode="numeric"
+                    placeholder="00000000-0" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.dui }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.dui }}</div>
+                  </sc-if>
+                </div>
+                </sc-if>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Teléfono <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-telefono" name="telefono" value="{{ form.telefono }}" onChange="{{ onField }}" inputmode="numeric"
+                    placeholder="0000-0000" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.telefono }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.telefono }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Correo electrónico <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-correo" name="correo" value="{{ form.correo }}" onChange="{{ onField }}" type="email"
+                    placeholder="tucorreo@ejemplo.com" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.correo }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.correo }}</div>
+                  </sc-if>
+                </div>
+                <sc-if value="{{ isJuridicoForm }}" hint-placeholder-val="{{ false }}">
+                  <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">Detalle de la asesoría</div>
+                </div>
                 <div style="grid-column:1/-1">
-                  <label
-                    style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Comentarios</label>
-                  <textarea id="gtm-form-comentarios" name="comentarios" value="{{ form.comentarios }}" onChange="{{ onField }}" rows="4"
-                    placeholder="Cuéntanos brevemente sobre tu caso (opcional)"
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Área de asesoría <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-area-juridica" name="areaJuridica" value="{{ form.areaJuridica }}"
+                    onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ areaJuridicaOptions }}" as="ar" hint-placeholder-count="6">
+                      <option value="{{ ar.t }}">{{ ar.t }}</option>
+                    </sc-for>
+                  </select>
+                  <sc-if value="{{ areaJuridicaDesc }}" hint-placeholder-val="{{ false }}">
+                    <div
+                      style="margin-top:9px;background:#e9edf7;border-radius:8px;padding:12px 14px;font-size:13px;line-height:1.55;color:#1c2c54">
+                      Incluye: {{ areaJuridicaDesc }}</div>
+                  </sc-if>
+                  <sc-if value="{{ errors.areaJuridica }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.areaJuridica }}</div>
+                  </sc-if>
+                </div>
+                <div style="grid-column:1/-1">
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Describe tu caso a consultar <span style="font-weight:400;color:#8a8f83">(opcional)</span></label>
+                  <textarea id="gtm-form-descripcion-caso" name="descripcionCaso" value="{{ form.descripcionCaso }}"
+                    onChange="{{ onField }}" rows="4" placeholder="Cuéntanos brevemente qué necesitas consultar"
                     style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none;resize:vertical"
                     style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)"></textarea>
                 </div>
-
-                <div style="grid-column:1/-1">
-                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Constancia
-                    de sueldo o balance (si eres comerciante)</label>
-                  <div
-                    style="border:1.5px dashed #cdcabf;border-radius:10px;padding:20px;background:#fbfbf9;text-align:center">
-                    <input id="gtm-form-archivo" name="archivo" type="file" accept="image/*,.pdf" onChange="{{ onFile }}"
-                      style="display:none">
-                    <label for="gtm-form-archivo"
-                      style="display:inline-block;background:#e9edf7;color:#1c2c54;font-size:13px;font-weight:600;padding:11px 22px;border-radius:6px;cursor:pointer">Seleccionar
-                      archivo</label>
-                    <div style="font-size:12.5px;color:#8a8f83;margin-top:10px">PDF o imagen · máximo 10 MB</div>
-                    <sc-if value="{{ fileName }}" hint-placeholder-val="{{ false }}">
-                      <div style="font-size:13px;color:#1c2c54;font-weight:600;margin-top:10px">{{ fileName }}</div>
-                    </sc-if>
                   </div>
-                  <sc-if value="{{ fileError }}" hint-placeholder-val="{{ false }}">
-                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ fileError }}</div>
+                </sc-if>
+                <sc-if value="{{ isPrestamoDetalle }}" hint-placeholder-val="{{ false }}">
+                  <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">Detalle del préstamo</div>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio específico</label>
+                  <div
+                    style="padding:13px 15px;border:1px solid #e6e3da;border-radius:8px;font-size:14.5px;color:#5a6157;background:#f2f0ea">
+                    {{ form.tipoPrestamo }}</div>
+                </div>
+                <sc-if value="{{ isPrestaGob }}" hint-placeholder-val="{{ false }}">
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Servicio de interés <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-prestagob-modalidad" name="prestagobModalidad" value="{{ form.prestagobModalidad }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ prestagobModalidadOptions }}" as="op" hint-placeholder-count="3">
+                      <option value="{{ op }}">{{ op }}</option>
+                    </sc-for>
+                  </select>
+                  <sc-if value="{{ errors.prestagobModalidad }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.prestagobModalidad }}</div>
                   </sc-if>
                 </div>
-
+                </sc-if>
+                <sc-if value="{{ pideFuenteIngreso }}" hint-placeholder-val="{{ true }}">
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Fuente de ingreso <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-fuente-ingreso" name="fuenteIngreso" value="{{ form.fuenteIngreso }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ fuenteIngresoOptions }}" as="op" hint-placeholder-count="3">
+                      <option value="{{ op }}">{{ op }}</option>
+                    </sc-for>
+                  </select>
+                  <sc-if value="{{ errors.fuenteIngreso }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.fuenteIngreso }}</div>
+                  </sc-if>
+                </div>
+                </sc-if>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">{{ labelLugarTrabajo }} <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-lugar-trabajo" name="lugarTrabajo" value="{{ form.lugarTrabajo }}" onChange="{{ onField }}"
+                    placeholder="Nombre del lugar de trabajo" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.lugarTrabajo }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.lugarTrabajo }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Monto de sueldo o ingresos <span style="color:#c0392b">*</span></label>
+                  <div style="display:flex;align-items:center;border:1px solid #d3d0c6;border-radius:8px;overflow:hidden;background:#fbfbf9">
+                    <span style="padding:0 14px;color:#8a8f83;font-size:15px;font-weight:600">$</span>
+                    <input id="gtm-form-sueldo" name="sueldo" value="{{ form.sueldo }}" onChange="{{ onField }}" inputmode="decimal"
+                      placeholder="0.00"
+                      style="flex:1;border:none;padding:13px 15px 13px 4px;background:transparent;font-size:14.5px;font-family:inherit;color:#1a2236;outline:none">
+                  </div>
+                  <sc-if value="{{ errors.sueldo }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.sueldo }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Monto a solicitar <span style="color:#c0392b">*</span></label>
+                  <div style="display:flex;align-items:center;border:1px solid #d3d0c6;border-radius:8px;overflow:hidden;background:#fbfbf9">
+                    <span style="padding:0 14px;color:#8a8f83;font-size:15px;font-weight:600">$</span>
+                    <input id="gtm-form-monto-solicitar" name="montoSolicitar" value="{{ form.montoSolicitar }}" onChange="{{ onField }}" inputmode="decimal"
+                      placeholder="0.00"
+                      style="flex:1;border:none;padding:13px 15px 13px 4px;background:transparent;font-size:14.5px;font-family:inherit;color:#1a2236;outline:none">
+                  </div>
+                  <sc-if value="{{ errors.montoSolicitar }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.montoSolicitar }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Plazo a solicitar (meses) <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-plazo-solicitar" name="plazoSolicitar" value="{{ form.plazoSolicitar }}" onChange="{{ onField }}" inputmode="numeric"
+                    placeholder="Ej. 24" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.plazoSolicitar }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.plazoSolicitar }}</div>
+                  </sc-if>
+                </div>
+                <div style="grid-column:1/-1">
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Dirección <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-direccion" name="direccion" value="{{ form.direccion }}" onChange="{{ onField }}"
+                    placeholder="Dirección completa" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.direccion }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.direccion }}</div>
+                  </sc-if>
+                </div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ isPrendario }}" hint-placeholder-val="{{ false }}">
+                  <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">Datos de la prenda</div>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Tipo de prenda <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-tipo-prenda" name="tipoPrenda" value="{{ form.tipoPrenda }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ tipoPrendaOptions }}" as="op" hint-placeholder-count="3">
+                      <option value="{{ op }}">{{ op }}</option>
+                    </sc-for>
+                  </select>
+                  <sc-if value="{{ errors.tipoPrenda }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.tipoPrenda }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Año de la prenda <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-anio-prenda" name="anioPrenda" value="{{ form.anioPrenda }}" onChange="{{ onField }}" inputmode="numeric"
+                    placeholder="Ej. 2018" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.anioPrenda }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.anioPrenda }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Marca <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-marca" name="marca" value="{{ form.marca }}" onChange="{{ onField }}"
+                    placeholder="Ej. Toyota" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.marca }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.marca }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Modelo <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-modelo" name="modelo" value="{{ form.modelo }}" onChange="{{ onField }}"
+                    placeholder="Ej. Corolla" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.modelo }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.modelo }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Placa <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-placa" name="placa" value="{{ form.placa }}" onChange="{{ onField }}"
+                    placeholder="Ej. P123456" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.placa }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.placa }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Estado de la prenda <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-estado-prenda" name="estadoPrenda" value="{{ form.estadoPrenda }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ estadoPrendaOptions }}" as="op" hint-placeholder-count="3">
+                      <option value="{{ op }}">{{ op }}</option>
+                    </sc-for>
+                  </select>
+                  <sc-if value="{{ errors.estadoPrenda }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.estadoPrenda }}</div>
+                  </sc-if>
+                </div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ isHipotecario }}" hint-placeholder-val="{{ false }}">
+                  <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">Datos del inmueble</div>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Tipo de inmueble <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-tipo-inmueble" name="tipoInmueble" value="{{ form.tipoInmueble }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ tipoInmuebleOptions }}" as="op" hint-placeholder-count="3">
+                      <option value="{{ op }}">{{ op }}</option>
+                    </sc-for>
+                  </select>
+                  <sc-if value="{{ errors.tipoInmueble }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.tipoInmueble }}</div>
+                  </sc-if>
+                </div>
+                <div style="grid-column:1/-1">
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Ubicación del inmueble <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-ubicacion-inmueble" name="ubicacionInmueble" value="{{ form.ubicacionInmueble }}" onChange="{{ onField }}"
+                    placeholder="Departamento, municipio y dirección" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.ubicacionInmueble }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.ubicacionInmueble }}</div>
+                  </sc-if>
+                </div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ isPrestaGob }}" hint-placeholder-val="{{ false }}">
+                  <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">¿Tiene embargo? <span style="color:#c0392b">*</span></label>
+                  <select id="gtm-form-embargo" name="embargo" value="{{ form.embargo }}" onChange="{{ onField }}" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                    <option value="">— Selecciona —</option>
+                    <sc-for list="{{ embargoOptions }}" as="op" hint-placeholder-count="3">
+                      <option value="{{ op }}">{{ op }}</option>
+                    </sc-for>
+                  </select>
+                  <sc-if value="{{ errors.embargo }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.embargo }}</div>
+                  </sc-if>
+                </div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ isCarteraForm }}" hint-placeholder-val="{{ false }}">
+                  <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 24px">
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">Detalle de la deuda</div>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Monto de la deuda <span style="color:#c0392b">*</span></label>
+                  <div style="display:flex;align-items:center;border:1px solid #d3d0c6;border-radius:8px;overflow:hidden;background:#fbfbf9">
+                    <span style="padding:0 14px;color:#8a8f83;font-size:15px;font-weight:600">$</span>
+                    <input id="gtm-form-monto-deuda" name="montoDeuda" value="{{ form.montoDeuda }}" onChange="{{ onField }}" inputmode="decimal"
+                      placeholder="0.00"
+                      style="flex:1;border:none;padding:13px 15px 13px 4px;background:transparent;font-size:14.5px;font-family:inherit;color:#1a2236;outline:none">
+                  </div>
+                  <sc-if value="{{ errors.montoDeuda }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.montoDeuda }}</div>
+                  </sc-if>
+                </div>
+                <div>
+                  <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Empresa donde tiene la deuda <span style="color:#c0392b">*</span></label>
+                  <input id="gtm-form-empresa-deuda" name="empresaDeuda" value="{{ form.empresaDeuda }}" onChange="{{ onField }}"
+                    placeholder="Nombre de la empresa" style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none" style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)">
+                  <sc-if value="{{ errors.empresaDeuda }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ errors.empresaDeuda }}</div>
+                  </sc-if>
+                </div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ pideComentarios }}" hint-placeholder-val="{{ false }}">
+                  <div style="grid-column:1/-1">
+                    <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">Comentarios <span style="font-weight:400;color:#8a8f83">(opcional)</span></label>
+                    <textarea id="gtm-form-comentarios" name="comentarios" value="{{ form.comentarios }}"
+                      onChange="{{ onField }}" rows="4" placeholder="Cuéntanos brevemente sobre tu caso"
+                      style="width:100%;padding:13px 15px;border:1px solid #d3d0c6;border-radius:8px;font-size:14.5px;font-family:inherit;color:#1a2236;background:#fbfbf9;outline:none;resize:vertical"
+                      style-focus="border-color:#1c2c54;box-shadow:0 0 0 3px rgba(28,44,84,.14)"></textarea>
+                  </div>
+                </sc-if>
+                <div style="grid-column:1/-1;margin-top:6px;padding-bottom:9px;border-bottom:1px solid #e6e3da">
+                  <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8933f">Documentos adjuntos</div>
+                </div>
+                <sc-for list="{{ adjuntos }}" as="adj" hint-placeholder-count="3">
+                  <div style="grid-column:1/-1">
+                    <label style="display:block;font-size:13px;font-weight:600;color:#3a4137;margin-bottom:7px">{{ adj.label }} <span style="font-weight:400;color:#8a8f83">(opcional)</span></label>
+                    <div
+                      style="border:1.5px dashed #cdcabf;border-radius:10px;padding:20px;background:#fbfbf9;text-align:center">
+                      <input id="{{ adj.id }}" name="{{ adj.key }}" type="file" accept="image/*,.pdf"
+                        onChange="{{ onFile }}" style="display:none">
+                      <label for="{{ adj.id }}"
+                        style="display:inline-block;background:#e9edf7;color:#1c2c54;font-size:13px;font-weight:600;padding:11px 22px;border-radius:6px;cursor:pointer">Seleccionar
+                        archivo</label>
+                      <div style="font-size:12.5px;color:#8a8f83;margin-top:10px;line-height:1.5">{{ adj.hint }}</div>
+                      <sc-if value="{{ adj.archivo }}" hint-placeholder-val="{{ false }}">
+                        <div style="font-size:13px;color:#1c2c54;font-weight:600;margin-top:10px;word-break:break-all">{{ adj.archivo }}</div>
+                      </sc-if>
+                    </div>
+                    <sc-if value="{{ adj.error }}" hint-placeholder-val="{{ false }}">
+                      <div style="color:#c0392b;font-size:12.5px;margin-top:6px">{{ adj.error }}</div>
+                    </sc-if>
+                  </div>
+                </sc-for>
                 <div style="grid-column:1/-1">
                   <label style="display:flex;gap:11px;align-items:flex-start;cursor:pointer">
-                    <input id="gtm-form-consentimiento" type="checkbox" checked="{{ form.consentimiento }}" onChange="{{ onConsent }}"
+                    <input id="gtm-form-consentimiento" type="checkbox" checked="{{ form.consentimiento }}"
+                      onChange="{{ onConsent }}"
                       style="margin-top:3px;width:17px;height:17px;accent-color:#1c2c54;flex:none">
                     <span style="font-size:13.5px;line-height:1.55;color:#4c534a">Acepto que Ecoley recopile y almacene
                       la información proporcionada con el fin de gestionar mi solicitud, conforme a su política de
@@ -736,6 +934,8 @@
                     style="background:#1c2c54;color:#fff;font-size:15px;font-weight:600;padding:16px 40px;border-radius:6px;border:none;cursor:pointer;font-family:inherit">{{
                     sendLabel }}</button>
                 </div>
+                  </div>
+                </sc-if>
               </form>
             </sc-if>
           </section>
@@ -759,8 +959,8 @@
                 Consultores de Leyes</div>
             </div>
           </div>
-          <p style="font-size:13.5px;line-height:1.6;color:#9098b5;margin:0;max-width:280px">Soluciones jurídicas y
-            financieras confiables para personas y empresas en El Salvador.</p>
+          <p style="font-size:13.5px;line-height:1.6;color:#9098b5;margin:0;max-width:280px">Soluciones jurídicas
+            y económicas confiables para personas y empresas en El Salvador.</p>
         </div>
         <div>
           <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8189a8;margin-bottom:16px">
@@ -810,13 +1010,11 @@ class Component extends DCLogic {
   // ====================================================================
   // CONTENIDO — listas de servicios (fácilmente editables)
   // ====================================================================
+  // Cada elemento puede llevar un detalle opcional (d) que se muestra debajo.
   juridicosItems = [
-    'Asesoría legal integral',
-    'Elaboración y revisión de contratos',
-    'Trámites administrativos',
-    'Gestión y regularización de documentación',
-    'Consultoría jurídica preventiva',
-    'Asistencia en procesos legales y mercantiles'
+    { t: 'Asesoría Legal Civil, Mercantil, Derecho de Familia y Derecho de Sucesión', d: '' },
+    { t: 'Servicios Notariales', d: 'Escrituras públicas (compraventas y arrendamientos), autenticaciones (legalización de firmas y copias de documentos), poderes (autorizaciones generales o especiales para gestiones locales) y diligencias (testamentos y constitución de sociedades).' },
+    { t: 'Trámites Registrales', d: 'Inscripciones en SERTRACEN y CNR.' }
   ];
   carteraItems = [
     'Cobro administrativo de deudas',
@@ -824,26 +1022,73 @@ class Component extends DCLogic {
     'Negociación y acuerdos de pago',
     'Elaboración de convenios de pago',
     'Seguimiento y control de cuentas por cobrar',
-    'Asesoría jurídica para la recuperación de créditos',
+    'Asesoría jurídica para la recuperación de préstamos',
     'Cobro prejudicial y apoyo en procesos judiciales'
   ];
   prestamosProductos = [
-    { t: 'Préstamos Personales', d: 'Opciones de financiamiento para cubrir necesidades personales, familiares, educativas, de salud o proyectos particulares.', img: 'assets/prestamo-personal.webp' },
-    { t: 'Préstamos Prendarios', d: 'Alternativas de crédito respaldadas por bienes muebles, con procesos ágiles y condiciones competitivas.', img: 'assets/prestamo-prendario.webp' },
-    { t: 'Préstamos Hipotecarios', d: 'Financiamiento para adquisición, construcción, remodelación o consolidación de inmuebles, con acompañamiento durante todo el proceso.', img: 'assets/prestamo-hipotecario.webp' }
+    { t: 'Préstamos Personales', d: 'Opciones de financiamiento para empleados, comerciantes, pensionados y por remesas, para cubrir necesidades personales, familiares, educativas, de salud o proyectos particulares.', img: 'assets/prestamo-personal.webp' },
+    { t: 'Préstamos Prendarios', d: 'Alternativas de préstamo respaldadas por bienes muebles, con procesos ágiles y condiciones competitivas.', img: 'assets/prestamo-prendario.webp' },
+    { t: 'Préstamos Hipotecarios', d: 'Préstamos con garantía hipotecaria dirigidos a propietarios de bienes inmuebles, con procesos ágiles y condiciones competitivas.', img: 'assets/prestamo-hipotecario.webp' },
+    { t: 'PrestaGob', d: 'Atención especializada a empleados del sector público, facilitando el acceso a opciones de préstamo mediante un proceso rápido y personalizado.', img: 'assets/handshake.webp' }
   ];
   serviceInteresadoOptions = ['Servicios Jurídicos', 'Intermediación de Préstamos', 'Gestión y Recuperación de Cartera'];
-  especificoMap = {
-    'Servicios Jurídicos': this.juridicosItems,
-    'Intermediación de Préstamos': ['Préstamos Personales', 'Préstamos Prendarios', 'Préstamos Hipotecarios'],
-    'Gestión y Recuperación de Cartera': this.carteraItems
+
+  // ---- opciones del formulario adaptativo ----
+  tipoPrestamoOptions = ['Préstamo Personal', 'Préstamo Prendario', 'Préstamo Hipotecario', 'PrestaGob'];
+  areaJuridicaOptions = [
+    { t: 'Asesoría en Derecho Civil', d: 'Contratos, obligaciones, arrendamientos e indemnizaciones.' },
+    { t: 'Asesoría en Derecho de Familia', d: 'Matrimonios, divorcios, pensiones alimenticias, adopciones y permisos especiales de menores.' },
+    { t: 'Asesoría en Derecho Sucesorio', d: 'Aceptación de herencias, testamentos y particiones.' },
+    { t: 'Asesoría en Derecho Civil y Mercantil', d: 'Constitución de sociedades, contratos comerciales y cumplimiento corporativo.' },
+    { t: 'Asesoría Laboral', d: 'Contratos de trabajo, despidos y conflictos laborales.' },
+    { t: 'Asesoría Notarial', d: 'Poderes, escrituras, autenticaciones, declaraciones juradas y otros documentos notariales.' }
+  ];
+  fuenteIngresoOptions = ['Empleado Privado', 'Comerciante', 'Pensionado', 'Receptor de remesas'];
+  prestagobModalidadOptions = ['Préstamo Personal', 'Préstamo Prendario', 'Préstamo Hipotecario'];
+  tipoPrendaOptions = ['Moto', 'Automóvil'];
+  estadoPrendaOptions = ['Excelente', 'Bueno'];
+  tipoInmuebleOptions = ['Terreno', 'Terreno con construcción'];
+  embargoOptions = ['No', 'Sí'];
+
+  // ---- adjuntos: qué se pide en cada tipo de solicitud ----
+  ADJ = {
+    comprobanteIngreso: { label: 'Comprobante de ingreso', hint: 'Constancia laboral, boleta de pago, constancia de remesas, constancia de pensión o detalle de ingresos si eres comerciante.' },
+    comprobanteIngresoGob: { label: 'Constancia de sueldo o boleta de pago', hint: 'Emitida por la institución donde laboras.' },
+    reciboServicios: { label: 'Recibo de agua o luz', hint: 'Cualquiera de los dos, a nombre del solicitante.' },
+    duiFoto: { label: 'DUI (fotografía)', hint: 'Fotografía o escaneo legible por ambos lados.' },
+    fotoPrenda: { label: 'Fotografía de la prenda', hint: 'Fotografía del vehículo que dejarás en garantía.' },
+    tarjetaCirculacion: { label: 'Tarjeta de circulación', hint: 'Del vehículo que dejarás en garantía.' },
+    fotoPropiedad: { label: 'Fotografía de la propiedad', hint: 'Del inmueble que dejarás en garantía.' },
+    documentosPersonales: { label: 'Documentos personales', hint: 'DUI y cualquier documento que identifique al solicitante.' },
+    documentos: { label: 'Documentos adjuntos', hint: 'Adjunta documentación que respalde tu asesoría.' }
   };
+  adjuntosPorServicio = {
+    'Servicios Jurídicos': ['documentos'],
+    'Gestión y Recuperación de Cartera': ['documentosPersonales', 'comprobanteIngreso'],
+    'Préstamo Personal': ['comprobanteIngreso', 'reciboServicios', 'duiFoto'],
+    'Préstamo Prendario': ['comprobanteIngreso', 'reciboServicios', 'duiFoto', 'fotoPrenda', 'tarjetaCirculacion'],
+    'Préstamo Hipotecario': ['comprobanteIngreso', 'reciboServicios', 'duiFoto', 'fotoPropiedad'],
+    'PrestaGob': ['comprobanteIngresoGob', 'reciboServicios', 'duiFoto']
+  };
+  MAX_FILE_BYTES = 10 * 1024 * 1024;   // por archivo — debe coincidir con enviar-solicitud.js
+  MAX_TOTAL_BYTES = 20 * 1024 * 1024;  // suma de todos los adjuntos (límite de tamaño del correo)
 
   emptyForm() {
-    return { nombre: '', dui: '', telefono: '', correo: '', lugarTrabajo: '', sueldo: '', direccion: '', servicioInteresado: '', servicioEspecifico: '', servicioEspecificoOtro: '', comentarios: '', consentimiento: false, honeypot: '' };
+    return {
+      nombre: '', dui: '', telefono: '', correo: '',
+      servicioInteresado: '', tipoPrestamo: '',
+      areaJuridica: '', descripcionCaso: '',
+      fuenteIngreso: '', prestagobModalidad: '', lugarTrabajo: '', sueldo: '', direccion: '',
+      montoSolicitar: '', plazoSolicitar: '',
+      tipoPrenda: '', anioPrenda: '', marca: '', modelo: '', placa: '', estadoPrenda: '',
+      tipoInmueble: '', ubicacionInmueble: '', embargo: '',
+      montoDeuda: '', empresaDeuda: '',
+      comentarios: '', consentimiento: false, honeypot: ''
+    };
   }
+  emptyFiles() { return { files: {}, fileNames: {}, fileErrors: {} }; }
 
-  state = { page: 'inicio', menuOpen: false, form: this.emptyForm(), errors: {}, fileName: '', fileObj: null, fileError: '', sending: false, submitError: '', submitted: false };
+  state = { page: 'inicio', menuOpen: false, form: this.emptyForm(), errors: {}, ...this.emptyFiles(), sending: false, submitError: '', submitted: false };
 
   componentDidMount() {
     try { document.documentElement.lang = 'es'; document.title = 'Ecoley | Servicios Jurídicos, Préstamos y Recuperación de Cartera'; } catch (e) {}
@@ -854,7 +1099,7 @@ class Component extends DCLogic {
     this.setState(s => {
       const next = { page, menuOpen: false, submitted: false };
       if (s.page === 'formulario' && page !== 'formulario') {
-        Object.assign(next, { form: this.emptyForm(), errors: {}, fileName: '', fileObj: null, fileError: '', submitError: '' });
+        Object.assign(next, { form: this.emptyForm(), errors: {}, ...this.emptyFiles(), submitError: '' });
       }
       return next;
     });
@@ -867,17 +1112,27 @@ class Component extends DCLogic {
   navContacto = () => this.go('contacto');
   toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
 
-  goForm = (servicio) => {
-    this.setState(s => ({ page: 'formulario', menuOpen: false, submitted: false, errors: {}, form: { ...s.form, servicioInteresado: servicio || '', servicioEspecifico: '' } }));
+  goForm = (servicio, tipoPrestamo) => {
+    this.setState(s => ({
+      page: 'formulario', menuOpen: false, submitted: false, errors: {},
+      form: { ...s.form, servicioInteresado: servicio || '', tipoPrestamo: tipoPrestamo || '' }
+    }));
     try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {}
   };
   goFormGeneric = () => this.goForm('');
   solicitarJuridicos = () => this.goForm('Servicios Jurídicos');
-  solicitarPrestamos = () => this.goForm('Intermediación de Préstamos');
   solicitarCartera = () => this.goForm('Gestión y Recuperación de Cartera');
-  nuevaSolicitud = () => this.setState({ submitted: false, form: this.emptyForm(), errors: {}, fileName: '', fileObj: null, fileError: '', submitError: '' });
+  // desde las tarjetas de la página de préstamos: preselecciona la línea elegida
+  productoATipo = { 'Préstamos Personales': 'Préstamo Personal', 'Préstamos Prendarios': 'Préstamo Prendario', 'Préstamos Hipotecarios': 'Préstamo Hipotecario', 'PrestaGob': 'PrestaGob' };
+  solicitarPrestamos = (e) => {
+    let tipo = '';
+    try { tipo = this.productoATipo[e.currentTarget.dataset.producto] || ''; } catch (err) {}
+    this.goForm('Intermediación de Préstamos', tipo);
+  };
+  nuevaSolicitud = () => this.setState({ submitted: false, form: this.emptyForm(), errors: {}, ...this.emptyFiles(), submitError: '' });
 
   // ---------- formulario ----------
+  soloDigitos = { plazoSolicitar: 6, anioPrenda: 4 };
   onField = (e) => {
     const name = e.target.name; let v = e.target.value;
     if (name === 'telefono') v = v.replace(/\D/g, '').slice(0, 8);
@@ -885,45 +1140,107 @@ class Component extends DCLogic {
       const digits = v.replace(/\D/g, '').slice(0, 9);
       v = digits.length > 8 ? digits.slice(0, 8) + '-' + digits.slice(8) : digits;
     }
-    else if (name === 'sueldo') v = v.replace(/[^\d.]/g, '');
+    else if (name === 'sueldo' || name === 'montoSolicitar' || name === 'montoDeuda') v = v.replace(/[^\d.]/g, '');
+    else if (this.soloDigitos[name]) v = v.replace(/\D/g, '').slice(0, this.soloDigitos[name]);
     this.setState(s => {
       const form = { ...s.form, [name]: v };
-      if (name === 'servicioInteresado') { form.servicioEspecifico = ''; form.servicioEspecificoOtro = ''; }
-      if (name === 'servicioEspecifico' && v !== 'Otros') form.servicioEspecificoOtro = '';
+      // al cambiar de servicio o de línea de préstamo, los campos y adjuntos
+      // de la variante anterior dejan de existir: se limpian para no enviarlos
+      if (name === 'servicioInteresado' || name === 'tipoPrestamo') {
+        const base = this.emptyForm();
+        Object.keys(base).forEach(k => {
+          if (!['nombre', 'dui', 'telefono', 'correo', 'consentimiento', 'honeypot', 'servicioInteresado', 'tipoPrestamo'].includes(k)) form[k] = base[k];
+        });
+        if (name === 'servicioInteresado') form.tipoPrestamo = '';
+        return { form, errors: {}, ...this.emptyFiles() };
+      }
       return { form, errors: { ...s.errors, [name]: '' } };
     });
   };
   onFile = (e) => {
+    const key = e.target.name;
     const file = e.target.files && e.target.files[0];
-    if (!file) { this.setState({ fileName: '', fileObj: null, fileError: '' }); return; }
-    if (file.size > 10 * 1024 * 1024) { this.setState({ fileName: file.name, fileObj: null, fileError: 'El archivo supera los 10 MB. Elige uno más pequeño.' }); return; }
-    this.setState(s => ({ fileName: file.name, fileObj: file, fileError: '', errors: { ...s.errors, archivo: '' } }));
+    this.setState(s => {
+      const files = { ...s.files }, fileNames = { ...s.fileNames }, fileErrors = { ...s.fileErrors };
+      if (!file) { delete files[key]; delete fileNames[key]; delete fileErrors[key]; return { files, fileNames, fileErrors }; }
+      fileNames[key] = file.name;
+      if (file.size > this.MAX_FILE_BYTES) {
+        delete files[key];
+        fileErrors[key] = 'Este archivo pesa más de 10 MB. Elige uno más pequeño.';
+        return { files, fileNames, fileErrors };
+      }
+      const otros = Object.keys(files).filter(k => k !== key).reduce((n, k) => n + files[k].size, 0);
+      if (otros + file.size > this.MAX_TOTAL_BYTES) {
+        delete files[key];
+        fileErrors[key] = 'Entre todos los adjuntos superas los 20 MB. Quita alguno o envía archivos más livianos.';
+        return { files, fileNames, fileErrors };
+      }
+      files[key] = file; delete fileErrors[key];
+      return { files, fileNames, fileErrors };
+    });
   };
   onConsent = (e) => { const c = e.target.checked; this.setState(s => ({ form: { ...s.form, consentimiento: c }, errors: { ...s.errors, consentimiento: '' } })); };
+
+  // ---------- qué campos exige cada variante ----------
+  camposRequeridos(f) {
+    const req = { nombre: 'Ingresa tu nombre completo.', telefono: 'El teléfono debe tener 8 dígitos.', correo: 'Ingresa un correo electrónico válido.' };
+    if (f.servicioInteresado === 'Servicios Jurídicos') {
+      Object.assign(req, { dui: 'DUI inválido. Formato: 00000000-0.', areaJuridica: 'Selecciona el área de asesoría.' });
+    } else if (f.servicioInteresado === 'Gestión y Recuperación de Cartera') {
+      Object.assign(req, { montoDeuda: 'Ingresa el monto de la deuda.', empresaDeuda: 'Indica la empresa donde tienes la deuda.' });
+    } else if (f.servicioInteresado === 'Intermediación de Préstamos') {
+      Object.assign(req, {
+        dui: 'DUI inválido. Formato: 00000000-0.',
+        tipoPrestamo: 'Selecciona el tipo de préstamo.',
+        lugarTrabajo: 'Indica tu lugar de trabajo.',
+        sueldo: 'Ingresa un monto válido.',
+        direccion: 'Campo requerido.',
+        montoSolicitar: 'Ingresa el monto que necesitas.',
+        plazoSolicitar: 'Indica el plazo en meses.'
+      });
+      if (f.tipoPrestamo === 'PrestaGob') {
+        Object.assign(req, { prestagobModalidad: 'Selecciona el servicio de interés.', embargo: 'Indica si tienes embargo.' });
+      } else {
+        req.fuenteIngreso = 'Selecciona tu fuente de ingreso.';
+      }
+      if (f.tipoPrestamo === 'Préstamo Prendario') {
+        Object.assign(req, {
+          tipoPrenda: 'Selecciona el tipo de prenda.', anioPrenda: 'Indica el año de la prenda.',
+          marca: 'Indica la marca.', modelo: 'Indica el modelo.', placa: 'Indica la placa.',
+          estadoPrenda: 'Selecciona el estado de la prenda.'
+        });
+      }
+      if (f.tipoPrestamo === 'Préstamo Hipotecario') {
+        Object.assign(req, { tipoInmueble: 'Selecciona el tipo de inmueble.', ubicacionInmueble: 'Indica la ubicación del inmueble.' });
+      }
+    }
+    return req;
+  }
 
   onSubmit = async (e) => {
     e.preventDefault();
     const f = this.state.form; const errs = {};
-    if (!f.nombre || f.nombre.trim().length < 3) errs.nombre = 'Ingresa tu nombre completo.';
-    if (!/^\d{8}-?\d$/.test(f.dui || '')) errs.dui = 'DUI inválido. Formato: 00000000-0.';
-    if (!/^\d{8}$/.test(f.telefono || '')) errs.telefono = 'El teléfono debe tener 8 dígitos.';
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.correo || '')) errs.correo = 'Ingresa un correo electrónico válido.';
-    if (!f.lugarTrabajo || !f.lugarTrabajo.trim()) errs.lugarTrabajo = 'Campo requerido.';
-    if (!f.sueldo || Number(f.sueldo) <= 0) errs.sueldo = 'Ingresa un monto válido.';
-    if (!f.direccion || !f.direccion.trim()) errs.direccion = 'Campo requerido.';
     if (!f.servicioInteresado) errs.servicioInteresado = 'Selecciona un servicio.';
-    if (!f.servicioEspecifico) errs.servicioEspecifico = 'Selecciona una opción.';
-    if (f.servicioEspecifico === 'Otros' && !String(f.servicioEspecificoOtro || '').trim()) errs.servicioEspecificoOtro = 'Especifica el servicio.';
+    const req = this.camposRequeridos(f);
+    Object.keys(req).forEach(k => { if (!String(f[k] || '').trim()) errs[k] = req[k]; });
+    if (f.nombre && f.nombre.trim().length < 3) errs.nombre = 'Ingresa tu nombre completo.';
+    if (req.dui && f.dui && !/^\d{8}-?\d$/.test(f.dui)) errs.dui = req.dui;
+    if (f.telefono && !/^\d{8}$/.test(f.telefono)) errs.telefono = req.telefono;
+    if (f.correo && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.correo)) errs.correo = req.correo;
+    ['sueldo', 'montoSolicitar', 'montoDeuda'].forEach(k => {
+      if (req[k] && f[k] && !(Number(f[k]) > 0)) errs[k] = 'Ingresa un monto válido.';
+    });
+    if (req.plazoSolicitar && f.plazoSolicitar && !(Number(f.plazoSolicitar) > 0)) errs.plazoSolicitar = 'Indica el plazo en meses.';
     if (!f.consentimiento) errs.consentimiento = 'Debes aceptar para continuar.';
-    if (this.state.fileError) errs.archivo = this.state.fileError;
-    if (Object.keys(errs).length) { this.setState({ errors: errs, submitError: '' }); return; }
+    if (Object.keys(this.state.fileErrors).length) errs.adjuntos = 'Revisa los archivos adjuntos.';
+    if (Object.keys(errs).length) { this.setState({ errors: errs, submitError: 'Revisa los campos marcados en rojo.' }); return; }
 
     this.setState({ sending: true, submitError: '' });
     try {
       if (this.CONFIG.formEndpoint) {
         const fd = new FormData();
         Object.entries(f).forEach(([k, v]) => fd.append(k, v));
-        if (this.state.fileObj) fd.append('archivo', this.state.fileObj);
+        Object.entries(this.state.files).forEach(([k, file]) => fd.append(k, file));
         const r = await fetch(this.CONFIG.formEndpoint, { method: 'POST', body: fd });
         if (!r.ok) throw new Error('bad response');
       } else {
@@ -936,9 +1253,18 @@ class Component extends DCLogic {
   };
 
   renderVals() {
-    const s = this.state, C = this.CONFIG;
-    const especificoOptions = s.form.servicioInteresado ? [...(this.especificoMap[s.form.servicioInteresado] || []), 'Otros'] : [];
+    const s = this.state, C = this.CONFIG, f = s.form;
     const active = (p) => 'ec-nav' + (s.page === p ? ' ec-active' : '');
+    const esJur = f.servicioInteresado === 'Servicios Jurídicos';
+    const esPres = f.servicioInteresado === 'Intermediación de Préstamos';
+    const esCart = f.servicioInteresado === 'Gestión y Recuperación de Cartera';
+    const area = this.areaJuridicaOptions.find(a => a.t === f.areaJuridica);
+    // la lista de adjuntos depende del servicio (y de la línea, si es préstamo)
+    const claveAdj = esPres ? f.tipoPrestamo : f.servicioInteresado;
+    const adjuntos = (this.adjuntosPorServicio[claveAdj] || []).map(k => ({
+      key: k, id: 'gtm-form-adj-' + k, label: this.ADJ[k].label, hint: this.ADJ[k].hint + ' PDF o imagen, máximo 10 MB.',
+      archivo: s.fileNames[k] || '', error: s.fileErrors[k] || ''
+    }));
     return {
       empresa: C.empresa, empresaFull: C.empresaFull, email: C.email, telefono: C.telefono,
       direccion: C.direccion, whatsappLink: 'https://wa.me/' + C.whatsapp, facebook: C.facebook,
@@ -948,10 +1274,25 @@ class Component extends DCLogic {
       navInicioClass: active('inicio'), navJuridicosClass: active('juridicos'), navPrestamosClass: active('prestamos'), navCarteraClass: active('cartera'),
       menuClass: s.menuOpen ? 'open' : '',
       juridicosItems: this.juridicosItems, carteraItems: this.carteraItems, prestamosProductos: this.prestamosProductos,
-      serviceInteresadoOptions: this.serviceInteresadoOptions, especificoOptions,
-      especificoDisabled: !s.form.servicioInteresado,
-      isOtroServicio: s.form.servicioEspecifico === 'Otros',
-      form: s.form, errors: s.errors, fileName: s.fileName, fileError: s.fileError,
+      // ---- formulario adaptativo ----
+      serviceInteresadoOptions: this.serviceInteresadoOptions, tipoPrestamoOptions: this.tipoPrestamoOptions,
+      areaJuridicaOptions: this.areaJuridicaOptions, fuenteIngresoOptions: this.fuenteIngresoOptions,
+      prestagobModalidadOptions: this.prestagobModalidadOptions, tipoPrendaOptions: this.tipoPrendaOptions,
+      estadoPrendaOptions: this.estadoPrendaOptions, tipoInmuebleOptions: this.tipoInmuebleOptions,
+      embargoOptions: this.embargoOptions,
+      isJuridicoForm: esJur, isPrestamosForm: esPres, isCarteraForm: esCart,
+      mostrarDetalle: !!f.servicioInteresado && (!esPres || !!f.tipoPrestamo),
+      isPrestamoDetalle: esPres && !!f.tipoPrestamo,
+      isPrendario: esPres && f.tipoPrestamo === 'Préstamo Prendario',
+      isHipotecario: esPres && f.tipoPrestamo === 'Préstamo Hipotecario',
+      isPrestaGob: esPres && f.tipoPrestamo === 'PrestaGob',
+      pideFuenteIngreso: esPres && !!f.tipoPrestamo && f.tipoPrestamo !== 'PrestaGob',
+      pideDui: esJur || esPres,
+      pideComentarios: esPres || esCart,
+      labelLugarTrabajo: f.tipoPrestamo === 'PrestaGob' ? 'Lugar de trabajo' : 'Lugar de trabajo o empresa',
+      areaJuridicaDesc: area ? area.d : '',
+      adjuntos,
+      form: f, errors: s.errors,
       sending: s.sending, submitError: s.submitError, submitted: s.submitted, notSubmitted: !s.submitted,
       sendLabel: s.sending ? 'Enviando…' : 'Enviar solicitud',
       navInicio: this.navInicio, navJuridicos: this.navJuridicos, navPrestamos: this.navPrestamos, navCartera: this.navCartera, navContacto: this.navContacto,
